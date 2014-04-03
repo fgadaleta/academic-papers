@@ -1,0 +1,96 @@
+\section{Approach}\label{approach}
+Microarray data are usually represented by the matrix $X = x_{ij}$ of the expression profiles of $i$ genes and $j$ individuals or sample tissues. 
+The main goal of the approach described in the current section is to infer the network topology that regulates the main interactions of the genes under investigation. 
+%and discover reliable interactions, starting from their expression profiles.
+Network modelling has proven to be an effective approach in computational biology due to the straightforward representation of conditional dependency between variables (\citealp{netmedicine1, netmedicine2}). Generally speaking, a network model is formed by a set of vertices $G$, representing the genes in our specific case, and a set of edges $E$ representing the pairwise interactions. The existence of edge $(i,j)$ represents the conditional dependency between gene $i$ and gene $j$.  If such an edge is not present, the two genes are considered conditionally independent, namely $(G_i \perp G_j) | G_k, \forall k=1...i$.
+In the specific application described in this paper, we aim at finding the best set of neighbours associated to each gene. We translate the biological meaning of association into the terms specified by regression analysis. The expression value of a gene is related to one or more independent variables, represented by other genes of the dataset. 
+
+Regardless the number of mathematical models that have been considered for inferring the association between variables in genetics, linear regression is a type of analysis that has found large consensus in the field of computational biology due to its simplicity of modelling (\citealp{linregression2, linregression1}). %Moreover, the capabilities of linear regression can be extended to other genetic compounds from the field of proteomics, metabolomics, methylation etc. [move to intro]
+One limitation of linear regression methods prevails in assuming a linear dependency between variables, a hypothesis that does not always apply in biology. One stratagem to overcome such a limitation consists of splitting the problem of learning the topology of the entire network of genes into a number of smaller linear problems. This can be achieved by regressing each covariate against all the remaining ones.  Such a strategy, which has been used first in the work reported in (\citealp{Meinshausen06highdimensional}) makes the assumption of linearity more suitable to the analysis of biological data.  Assuming the presence of linearities on a local scale is a much more convincing and appropriate conjecture that might find an application to data from genomics and proteomics.
+Another limitation that researchers have to take into account appears in the case of high-dimensional data. In such a scenario, the number of genes is usually some orders of magnitude larger than the number of the individuals. 
+Without loss of generality, the problem of inferring the conditional independence between variables is equivalent to the problem of computing the sample covariance matrix of the interactions among variables. In the case of high dimensional data, as well as in a more relaxed case in which the number of individuals has a similar order of magnitude as the number of genes, the inverse of the sample covariance matrix does not exist (\citealp{Buhl93mle}). Therefore, all approaches that are based on the maximum likelihood estimator do not provide a good approximation of the covariance matrix, making the solution of the interaction problem numerically unstable and the discovered interactions unreliable. 
+(FIXME to intro)
+
+Penalised regression has been considered as a way to circumvent such limitation due to the presence of a penalty factor that encourages sparsity of the final network.
+Specifically, lasso is one such regression method that converts the problem of estimating the covariance matrix into an optimisation problem in which a convex function, applied to each variable, is minimised.
+
+Given $X_i$ the expression of gene $i$ and the expression profiles of the remaining genes  (referred to as $X$, for simplicity), the lasso-based estimate consists of providing a solution for Equation \ref{eq:lasso}
+  
+\begin{equation}
+\label{eq:lasso}
+    \hat{\Theta}^{a,\lambda} = 
+    \argmin_{%
+      \substack{%
+        \text{s.\,t.}\, \Theta:\Theta_a = 0 \\
+        \phantom{}\, 
+      }
+    }
+    (\frac{1}{n} \| X_i - X\Theta \|^{2}_2 + \lambda \| \Theta \|_1)
+  \end{equation}
+  
+The vector of regression coefficients $\Theta$ determines the conditional independence structure between variables. The $l_1$-norm of the coefficient vector tends to shrink the coefficients of some variables to zero, removing them from the set of selected variables associated to the response, as extensively explained in (\citealp{Tibshirani94regressionshrinkage}). 
+The right choice of the shrinkage factor $\lambda$ is crucial to controlling the rate of false positives and false negatives. Regardless the number of approaches to approximate the optimal $\lambda$, reported in (\citealp{adalasso, efron2004, tuneparamsel}), a reliable estimate that is widely used in practice is provided by cross-validation (\citealp{glmnet}). 
+We use a 3-fold cross validation approach and estimate $\hat{\lambda_{cv}}$ from a subset of the data. Cross-validation can be a time consuming task especially when applied to datasets with a high number of covariates. Therefore, we estimate the shrinkage factor that minimises the expected generalisation error, for a grid of $\lambda$ values, on the $10\%$ of the total number of genes. The R package $glmnet$ has been used to provide such an estimate.  
+
+The method we describe in this paper is a two-step approach that recursively performs the regression of Equation \ref{eq:lasso} of each gene, considered as response, with respect to all remaining genes, considered as independent variables. The response gene is not included in the set of independent variables. Regardless biological evidence that supports the existence of self interactions and positive/negative feedback loops within regulatory networks (\citealp{netmotif, avrahamfeedback2011, generegmodel}), those are not considered here, in order to avoid complex interactions and simplify as much as possible the inferred network topology.
+
+In step 1, the set $S$ of variables associated with the current response gene is selected. We use a lasso method that does not fit the intercept. As explained, the choice of the optimal $\lambda$ occurs prior to this stage.
+
+In step 2, we use a permutation-based approach to assess the significance of the associated edges detected in step 1. The values of response variable are permuted a number of times. For each permutation we count how many times each variable within the set $S$ of selected genes has been selected again. At the end of the permutation test, the variables with the smallest counter are selected as the best candidate variables associated with the current response gene. 
+This approach is supported by the fact that after permuting the response variable, the genes selected at step 1 should be no longer associated and therefore should be considered as selected by chance. 
+
+%The described approach is summarised in table Algorithm \ref{algo:perm}.
+%The lasso procedure performed in step 2 uses the same $\lambda$ selected by cross-validation in step 1. The reason is twofold: the purpose of permuting the response variable is to break the link with the other independent variables by optimising an equivalent convex function which will select a number of variables close to those selected for the original (not permuted) response. Since the permutation affects only the response gene, the structure of the permuted data is equivalent to the original one. Moreover, using the same $\lambda$ increases the speed of the algorithm due to the fact that cross-validation is not needed anymore. (FIXME to Discussion)
+
+\begin{algorithm}
+ \begin{algorithmic}[1]
+ \Procedure{lasso2net}{$X_i,X, B, fanout, best$}
+ \State $fit \gets lasso.cv(X_i,X$)
+ \State $\lambda_{cv} \gets fit.lambda$
+ \State $S \gets fit.coeffs$
+ \State $S \gets sort(S, decreasing)[1:best] $ 
+ \While{$r < B$}
+ \State $X^{perm}_i \gets permute(X_i)$
+ \State $permfit \gets lasso(X^{perm}_i, X, \lambda_{cv}$)
+ \State $update(counter[S])$  update counters of selected variables 
+ \State $r\gets r+1$
+ \EndWhile
+ \State $sel\gets sort(counter[S], increase)[1:fanout] $ order and select first fanout
+ %\Comment{variables sorted by increasing order of counter}
+ \State \textbf{return} $sel$ 
+ \EndProcedure
+ \end{algorithmic}
+ \caption{Variable selection and permutation-based stability test}
+ \label{algo:perm}
+\end{algorithm}
+
+The procedure described above is summarised in Algorithm \ref{algo:perm}. 
+It selects the $best$ number of genes associated to the current response. Namely, the vector of the associated genes is sorted in decreasing order and the first $best$ are selected (\emph{line 5}). The parameter $best$ can be tuned in order to select a variable number of strong genetic effects according to the type of disease under investigation and the dataset at the researcher's disposal which, in turn, might determine the amount of significant genetic compounds to be considered for further analysis.   
+At each permutation, the counters of the selected variables are updated (\emph{line 9}) and after $B$ permutations the first $fanout$ genes are selected. These variables represent the most stable genes associated with the response variable (\emph{line 12}).
+
+The algorithm described above finds a solution of Equation \ref{eq:lasso} for each response variable. Subsequently, it finds the most stable non-zero regression coefficients associated to each gene. 
+When the described procedure is performed on the entire set of genes, an adjacency matrix can be built directly from the counters of selected variables. The aforementioned adjacency matrix represents the network topology of the inferred network of interactions. 
+Since we are interested in discovering interactions we convert the non-zero values to $1$ in the adjacency matrix, in order to denote the presence of an edge in the graph.
+As one would expect, the method does not guarantee the adjacency matrix to be symmetric. A symmetrisation procedure would be required before further analysis or visualisation of the predicted network. 
+We symmetrise the adjacency matrix by the $OR$ rule which considers two variables as associated if only one of the two variables is associated with the other. Namely, $gene_i \leftrightarrow gene_k \iff gene_i \rightarrow gene_k \vee gene_i \leftarrow gene_k $.
+
+The main goal of the work described here is to detect the structure of the network of the main genetic interactions, passing over the causality interactions. Detecting an interaction between two variables is sufficient to build the overall structure. 
+
+
+%Describe the model: for each gene a regression problem is solved 
+%Describe lasso we use is because 
+%1) sparse model (reduce variance but introduces bias)
+%2) fast (can be parallelised)
+%3) 
+%\citealp{robustmethods}
+%stability \citealp{stabilitygnr}
+%\citealp{Goeman2007}
+%the coefficients of variables selected with lasso should be considered a mathematical abstraction (regression) that may differ from the biological meaning of interaction. 
+%therefore, we ignore the values of the coefficients and focus on those that differs from zero (selected).
+%
+%1. apply the regression to each variable as in Meinshausen\&Buhlmann to select its neighbors, that is the variables that best fit the model with the value of the response.
+%2. with a perturbation test (the response is perturbed with random error $~ N(0,sigma)$ the selection is performed a number of times. All selected variables are ordered in decreasing order of number of times that the variable has been selected. The first $n_sel$ variables are selected as final neighbors of the current gene.
+%
+%
+%The use of lasso with a $L_1$ penalty shrinks to zero many more coefficients and provides a sparse models with only few nonzero variables. 
+%The adjacency matrix is gradually built. In fact, repeating this regression approach on each of the $n$ nodes provides $n$ coefficient vectors that represent the overall network of genes in the form of a matrix of coefficients. Unfortunately, this approach does not guarantee a symmetric matrix. Symmetrisation is performed  separately in a subsequent step of the proposed approach.

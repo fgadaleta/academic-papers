@@ -1,0 +1,32 @@
+\section{Discussion} \label{discussion}
+Despite the encouraging results of the method we described in the previous sections and performed on simulated genetic networks, we address some limitations we intend to investigate in the near future. 
+
+As already stated, genetic data are usually affected by measurement noise and a high number of variables collected from different datasets such as gene expression profiles, SNPs, methylation and clinical data. 
+
+The curse of dimensionality can set a limit on the number of permutations to perform. Due to the fact that our method relies on permuting each response variable, in order to increase the stability of the discovered interactions, the overall performance is directly affected by the total number of genes in the dataset. 
+We are investigating possible solutions to mitigate the curse of dimensionality by limiting the discovery of interactions to highly connected genes. This strategy would detect the local structure around genes usually referred to as network hubs. We do not interpret this fact as a limitation since biological networks usually manifest a scale free topology, in which only few nodes are highly connected to the rest of the graph (\citealp{BAR03a, evidencescalefree}). 
+
+The variable selection procedure consistently depends on the value of the shrinkage factor $\lambda$, estimated on a subset of the covariates. Obviously, it might occur a prior exclusion of significant genes from further analyses in the case of a too restrictive shrinkage factor. An alleviation to this risk (which can  directly determine the false negative rate) consists in replacing the pure lasso penalty with an elastic net procedure of the type
+
+\begin{equation}
+\label{eq:elnet}
+    \hat{\Theta}^{a,\lambda} = 
+    \argmin_{%
+      \substack{%
+        \text{s.\,t.}\, \Theta:\Theta_a = 0 \\
+        \phantom{}\, 
+      }
+    }
+    (\frac{1}{n} \| X_i - X\Theta \|^{2}_2 + \alpha \| \Theta \|_{1} + (1-\alpha) \| \Theta \|^{2})
+  \end{equation}
+   
+
+In that case it would be necessary to estimate an additional parameter $\alpha$. To the other extreme, a pure ridge-regression procedure would not benefit from the permutation-based stability test, due to the fact that our method ignores the regression coefficients and selects the subset of genes with the best permutation score. 
+
+Another aspect we intend to probe regards the direction of the interactions. In our analysis we ignore the direction of each edge in the graph. A relaxation of the problem of learning the network topology consists in considering the interaction $i \rightarrow j$ equivalent to the interaction $j \rightarrow i$. Although this simplification makes the construction of the overall network consistently easier, it might lead to inconsistencies from a biological perspective. As a matter of fact, gene regulations are known to have a direction, usually referred to as activation and inhibition (FIXME refs). Learning the directionality of network edges represents an additional complexity that is plausible to deal with in the presence of a large number of samples or by integrating complementary data sources of known interactions. 
+Therefore, the need for integrating different data sources is twofold: data integration can increase the stability of all discovered interactions and their direction and, specifically to our method, it can reduce the number of required permutations per gene. We believe that data integration can consistently  improve the overall performance of the described approach. 
+
+We endorse our approach to be deployed in a pipeline in order to 1) analyse different data sources 2) build the local network from each dataset 3) increase the stability of predicted interactions by permutation and 4) integrate each singular network into a more stable and complete graph.
+
+
+%Further analysis and different sources of data might be integrated to discover the direction of each interaction. We believe that our goal does not diminish the biological meaning of the problem.

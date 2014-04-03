@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: document.aux
+The style file: plain.bst
+format.doi is an unknown function---line 1107 of file plain.bst
+format.url is an unknown function---line 1109 of file plain.bst
+Database file #1: lassonetwork.bib
+I was expecting a `,' or a `}'---line 200 of file lassonetwork.bib
+ : 
+ : TITLE = {A simple linear regression method for quantitative trait loci linkage analysis with censored observations.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "netmotif"
+refers to entry "conf/cibcb/2005", which doesn't exist
+A bad cross reference---entry "evidencescalefree"
+refers to entry "conf/iasse/2003", which doesn't exist
+Warning--I didn't find a database entry for "Boffelli03"
+Warning--I didn't find a database entry for "conf/cibcb/2005"
+Warning--I didn't find a database entry for "conf/iasse/2003"
+Warning--empty title in linregression2
+Warning--empty journal in linregression2
+Warning--empty year in linregression2
+Warning--empty journal in microarray_high_noise
+Warning--empty institution in Meinshausen_stabilityselection
+Warning--empty year in Meinshausen_stabilityselection
+You've used 27 entries,
+            2137 wiz_defined-function locations,
+            713 strings with 9897 characters,
+and the built_in function-call counts, 9166 in all, are:
+= -- 902
+> -- 444
+< -- 2
++ -- 173
+- -- 146
+* -- 723
+:= -- 1550
+add.period$ -- 82
+call.type$ -- 27
+change.case$ -- 153
+chr.to.int$ -- 0
+cite$ -- 33
+duplicate$ -- 308
+empty$ -- 697
+format.name$ -- 146
+if$ -- 1866
+int.to.chr$ -- 0
+int.to.str$ -- 27
+missing$ -- 25
+newline$ -- 137
+num.names$ -- 56
+pop$ -- 130
+preamble$ -- 1
+purify$ -- 126
+quote$ -- 0
+skip$ -- 216
+stack$ -- 0
+substring$ -- 627
+swap$ -- 40
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 108
+warning$ -- 6
+while$ -- 92
+width$ -- 29
+write$ -- 292
+(There were 5 error messages)

@@ -1,0 +1,156 @@
+\begin{thebibliography}{10}
+
+\bibitem{linregression2}
+Carl~A Anderson, Allan~F McRae, and Peter~M Visscher.
+
+\bibitem{avrahamfeedback2011}
+Roi Avraham and Yosef Yarden.
+\newblock Feedback regulation of egfr signalling: decision making by early and
+  delayed loops.
+\newblock {\em Nature Reviews Molecular Cell Biology}, 12(2):104--117, 2011.
+
+\bibitem{BAR03a}
+Albert-L\'aszl\'o Barab\'asi and Eric Bonabeau.
+\newblock {Scale-free networks}.
+\newblock {\em Sci.~Am.}, 288(5):50--59, 2003.
+
+\bibitem{netmedicine1}
+Albert-L\'{a}szl\'{o}~L. Barab\'{a}si, Natali Gulbahce, and Joseph Loscalzo.
+\newblock {Network medicine: a network-based approach to human disease.}
+\newblock {\em Nature reviews. Genetics}, 12(1):56--68, January 2011.
+
+\bibitem{Buhl93mle}
+S~Buhl.
+\newblock On the existence of maximum likelihood estimators for graphical
+  gaussian models, 1993.
+
+\bibitem{linregression1}
+Petra BÅ¯Å¾kovÃ¡.
+\newblock Linear regression in genetic association studies.
+\newblock {\em PLoS ONE}, 8(2):e56976, 02 2013.
+
+\bibitem{efron2004}
+Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani.
+\newblock Least angle regression.
+\newblock {\em The Annals of Statistics}, 32(2):407--499, 04 2004.
+
+\bibitem{finegold}
+Michael Finegold and Mathias Drton.
+\newblock {Robust graphical modeling of gene networks using classical and
+  alternative T-distributions}.
+\newblock {\em The Annals of Applied Statistics}, 5(2A):1057--1080, August
+  2011.
+
+\bibitem{glmnet}
+Jerome Friedman, Trevor Hastie, and Robert Tibshirani.
+\newblock Regularization paths for generalized linear models via coordinate
+  descent.
+\newblock {\em Journal of Statistical Software}, 33(1):1--22, 2010.
+
+\bibitem{ml_multicoll}
+Akhil Garg and Kang Tai.
+\newblock Comparison of statistical and machine learning methods in modelling
+  of data with multicollinearity.
+\newblock {\em International Journal of Modelling, Identification and Control},
+  18(4), 2013.
+
+\bibitem{genesets}
+J~J Goeman and P~B{\"u}hlmann.
+\newblock Analyzing gene expression data in terms of gene sets: methodological
+  issues.
+\newblock {\em Bioinformatics}, 23(8):980--987, April 2007.
+
+\bibitem{netmotif}
+Jennifer Hallinan and Paul~T. Jackway.
+\newblock Network motifs, feedback loops and the dynamics of genetic regulatory
+  networks.
+\newblock In {\em CIBCB}, pp. 90--96. IEEE, 2005.
+
+\bibitem{tuneparamsel}
+Kei Hirose, Shohei Tateishi, and Sadanori Konishi.
+\newblock Tuning parameter selection in sparse regression modeling.
+\newblock {\em Comput. Stat. Data Anal.}, 59:28--40, March 2013.
+
+\bibitem{microarray_high_noise}
+Klebanov L and Yakovlev.
+\newblock How high is the level of technical noise in microarray data?
+\newblock 2007.
+
+\bibitem{wisdomcrowds}
+Daniel Marbach, James~C. Costello, Robert K\"{u}ffner, Nicole~M. Vega,
+  Robert~J. Prill, Diogo~M. Camacho, Kyle~R. Allison, {DREAM5 Consortium},
+  Manolis Kellis, James~J. Collins, and Gustavo Stolovitzky.
+\newblock {Wisdom of crowds for robust gene network inference.}
+\newblock {\em Nature methods}, 9(8):796--804, August 2012.
+
+\bibitem{gnw2}
+Daniel Marbach, Thomas Schaffter, Claudio Mattiussi, and Dario Floreano.
+\newblock Generating {R}ealistic {I}n {S}ilico {G}ene {N}etworks for
+  {P}erformance {A}ssessment of {R}everse {E}ngineering {M}ethods.
+\newblock {\em Journal of {C}omputational {B}iology}, 16(2):229--239, 2009.
+\newblock WingX.
+
+\bibitem{Meinshausen_stabilityselection}
+Nicolai Meinshausen and Peter Bühlmann.
+\newblock Stability selection.
+\newblock Technical report.
+
+\bibitem{Meinshausen06highdimensional}
+Nicolai Meinshausen and Peter Bühlmann.
+\newblock High dimensional graphs and variable selection with the lasso.
+\newblock {\em ANNALS OF STATISTICS}, 34(3):1436--1462, 2006.
+
+\bibitem{est_multicoll}
+V~M Roso, F~S Schenkel, S~P Miller, and L~R Schaeffer.
+\newblock Estimation of genetic effects in the presence of multicollinearity in
+  multibreed beef cattle evaluation.
+\newblock {\em J Anim Sci}, 83(8):1788--800, 2005.
+
+\bibitem{gnw1}
+Thomas Schaffter, Daniel Marbach, and Dario Floreano.
+\newblock Gene{N}et{W}eaver: {I}n silico benchmark generation and performance
+  profiling of network inference methods.
+\newblock {\em Bioinformatics}, 27(16):2263--2270, 2011.
+\newblock wingx.
+
+\bibitem{generegmodel}
+Thomas Schlitt and Alvis Brazma.
+\newblock Current approaches to gene regulatory network modelling.
+\newblock {\em BMC Bioinformatics}, 8(S-6), 2007.
+
+\bibitem{evidencescalefree}
+Sandy Shaw.
+\newblock Evidence of scale-free topology and dynamics in gene regulatory
+  networks.
+\newblock In Antony Satyadas and Sergiu~M. Dascalu, editors, {\em IASSE}, pp.
+  37--40. ISCA, 2003.
+
+\bibitem{microarray_noise}
+E.G. Sifakis, A.~Prentza, D.~Koutsouris, and A.A. Chatziioannou.
+\newblock Evaluating the effect of various background correction methods
+  regarding noise reduction, in two-channel microarray data.
+\newblock {\em Computers in Biology and Medicine}, 42(1):19 -- 29, 2012.
+
+\bibitem{netmedicine2}
+Edwin~K. Silverman and Joseph Loscalzo.
+\newblock {Network medicine approaches to the genetics of complex diseases.}
+\newblock {\em Discovery medicine}, 14(75):143--152, August 2012.
+
+\bibitem{Tibshirani94regressionshrinkage}
+Robert Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock {\em Journal of the Royal Statistical Society, Series B},
+  58:267--288, 1994.
+
+\bibitem{Vidal2011Complex}
+Marc Vidal, Michael~E. Cusick, and Albert-L\'{a}szl\'{o} Barab\'{a}si.
+\newblock {Interactome Networks and Human Disease}.
+\newblock {\em Cell}, 144(6):986--998, March 2011.
+
+\bibitem{adalasso}
+Hui Zou.
+\newblock {The Adaptive Lasso and Its Oracle Properties}.
+\newblock {\em Journal of the American Statistical Association},
+  101(476):1418--1429, December 2006.
+
+\end{thebibliography}
