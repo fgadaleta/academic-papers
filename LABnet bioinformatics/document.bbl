@@ -60,6 +60,19 @@ Akhil Garg and Kang Tai.
 \newblock {\em International Journal of Modelling, Identification and Control},
   18(4), 2013.
 
+\bibitem{GeistlingerCKMZ11}
+Ludwig Geistlinger, Gergely Csaba, Robert Küffner, Nicola~J. Mulder, and Ralf
+  Zimmer.
+\newblock From sets to graphs: towards a realistic enrichment analysis of
+  transcriptomic systems.
+\newblock {\em Bioinformatics [ISMB/ECCB]}, 27(13):366--373, 2011.
+
+\bibitem{Goeman2007}
+J~J Goeman and P~B{\"u}hlmann.
+\newblock Analyzing gene expression data in terms of gene sets: methodological
+  issues.
+\newblock {\em Bioinformatics}, 23(8):980--987, April 2007.
+
 \bibitem{genesets}
 J~J Goeman and P~B{\"u}hlmann.
 \newblock Analyzing gene expression data in terms of gene sets: methodological
@@ -118,6 +131,12 @@ Nicolai Meinshausen and Peter Bühlmann.
 \newblock High dimensional graphs and variable selection with the lasso.
 \newblock {\em ANNALS OF STATISTICS}, 34(3):1436--1462, 2006.
 
+\bibitem{Michalak2008243}
+Pawel Michalak.
+\newblock Coexpression, coregulation, and cofunctionality of neighboring genes
+  in eukaryotic genomes.
+\newblock {\em Genomics}, 91(3):243 -- 248, 2008.
+
 \bibitem{est_multicoll}
 V~M Roso, F~S Schenkel, S~P Miller, and L~R Schaeffer.
 \newblock Estimation of genetic effects in the presence of multicollinearity in
@@ -135,13 +154,6 @@ Thomas Schaffter, Daniel Marbach, and Dario Floreano.
 Thomas Schlitt and Alvis Brazma.
 \newblock Current approaches to gene regulatory network modelling.
 \newblock {\em BMC Bioinformatics}, 8(S-6), 2007.
-
-\bibitem{evidencescalefree}
-Sandy Shaw.
-\newblock Evidence of scale-free topology and dynamics in gene regulatory
-  networks.
-\newblock In Antony Satyadas and Sergiu~M. Dascalu, editors, {\em IASSE}, pp.
-  37--40. ISCA, 2003.
 
 \bibitem{microarray_noise}
 E.G. Sifakis, A.~Prentza, D.~Koutsouris, and A.A. Chatziioannou.
@@ -171,6 +183,11 @@ Kristel Van~Steen, Desmond Curran, Jocelyn Kramer, Geert Molenberghs, Ann
 Marc Vidal, Michael~E. Cusick, and Albert-L\'{a}szl\'{o} Barab\'{a}si.
 \newblock {Interactome Networks and Human Disease}.
 \newblock {\em Cell}, 144(6):986--998, March 2011.
+
+\bibitem{YiST07}
+Gangman Yi, Sing-Hoi Sze, and Michael~R. Thon.
+\newblock Identifying clusters of functionally related genes in genomes.
+\newblock {\em Bioinformatics}, 23(9):1053--1060, 2007.
 
 \bibitem{adalasso}
 Hui Zou.

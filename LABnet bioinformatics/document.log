@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  20 APR 2014 10:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  20 APR 2014 12:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,16 +483,6 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 ) (./introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-
-
-Package natbib Warning: Citation `Michalak2008243' on page 1 undefined on input
- line 6.
-
-
-Package natbib Warning: Citation `YiST07' on page 1 undefined on input line 6.
-
 
 Underfull \hbox (badness 3049) in paragraph at lines 2--12
 \OT1/ptm/m/n/9 components. The study of these interactions is essential to
@@ -514,27 +504,13 @@ Underfull \hbox (badness 1038) in paragraph at lines 2--12
  []
 
 
-Package natbib Warning: Citation `Goeman2007' on page 1 undefined on input line
- 16.
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 13--18
-\OT1/ptm/m/n/9 and investigating the stability of regression models to predict
+Underfull \hbox (badness 1107) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 Regressing each covariate on the others and investigating the
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 13--18
-\OT1/ptm/m/n/9 the response are two methods that have been denoted in [].
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 13--18
-\OT1/ptm/m/n/9 successful forecast with multicollinear variables requires both
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 13--18
-\OT1/ptm/m/n/9 independent variables and stable interdependency relationships
+Underfull \hbox (badness 1082) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 and stable interdependency relationships within the predictors.
  []
 
 
@@ -562,6 +538,8 @@ Underfull \hbox (badness 1748) in paragraph at lines 30--31
 \OT1/ptm/m/n/9 gene, considered as response, with respect to all remaining
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
 (Font)              Font shape `OT1/phv/b/it' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
@@ -773,10 +751,6 @@ me, a pure ridge-regression
  []
 
 
-Package natbib Warning: Citation `GeistlingerCKMZ11' on page 5 undefined on inp
-ut line 28.
-
-
 Underfull \hbox (badness 1817) in paragraph at lines 30--32
 []\OT1/ptm/m/n/9 Learning the directionality of network edges represents an
  []
@@ -788,8 +762,13 @@ Underfull \hbox (badness 1442) in paragraph at lines 30--32
  []
 
 ) (./conclusion.tex
-Underfull \hbox (badness 4024) in paragraph at lines 2--4
-\OT1/ptm/m/n/9 LABNet is a lasso-based approach to detect main genetic
+Underfull \hbox (badness 1292) in paragraph at lines 2--4
+\OT1/ptm/m/n/9 We presented LABNet, Lasso-based approach to detect main
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 2--4
+\OT1/ptm/m/n/9 genetic interactions from gene expression profiles. Penalised
  []
 
 ) (./document.bbl
@@ -808,10 +787,10 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [5]
+Missing character: There is no ü in font ptmr7t!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Missing character: There is no ü in font ptmr7t!
-Missing character: There is no ü in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -829,27 +808,30 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [6 <./pred_fp-eps-converted-to.pdf> <./pred_fn-eps-converted-to.pdf> <./tp_mcc-
-eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>])
+eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>]
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 136.62122pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:10.0pt when 137.62122pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:0.0pt when 138.62122pt
+Extra height:10.0pt when 154.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:138.62122pt Right:138.24243pt Output:138.62122pt
+Extra height:10.0pt when 155.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 156.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:156.62122pt Right:156.24243pt Output:156.62122pt
 - LAST -
 Extra skip:0.0pt
-Left:138.62122pt
-Right:138.24243pt
-Output:138.62122pt
+Left:156.62122pt
+Right:156.24243pt
+Output:156.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -864,9 +846,6 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
  [7
 
 ]
-
-Package natbib Warning: There were undefined citations.
-
 (./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -874,10 +853,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 5772 strings out of 493315
- 83761 string characters out of 6137905
- 159412 words of memory out of 5000000
- 9051 multiletter control sequences out of 15000+600000
+ 5771 strings out of 493315
+ 83742 string characters out of 6137905
+ 159460 words of memory out of 5000000
+ 9050 multiletter control sequences out of 15000+600000
  51150 words of font info for 104 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
  38i,11n,38p,1301b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -898,7 +877,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (7 pages, 248472 bytes).
+Output written on document.pdf (7 pages, 247909 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream

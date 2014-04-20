@@ -12,10 +12,7 @@ I was expecting a `,' or a `}'---line 311 of file lassonetwork.bib
 I'm skipping whatever remains of this entry
 A bad cross reference---entry "netmotif"
 refers to entry "conf/cibcb/2005", which doesn't exist
-A bad cross reference---entry "evidencescalefree"
-refers to entry "conf/iasse/2003", which doesn't exist
 Warning--I didn't find a database entry for "conf/cibcb/2005"
-Warning--I didn't find a database entry for "conf/iasse/2003"
 Warning--empty title in linregression2
 Warning--empty journal in linregression2
 Warning--empty year in linregression2
@@ -24,45 +21,45 @@ Warning--empty location in wna
 Warning--empty journal in microarray_high_noise
 Warning--empty institution in Meinshausen_stabilityselection
 Warning--empty year in Meinshausen_stabilityselection
-You've used 31 entries,
+You've used 34 entries,
             2137 wiz_defined-function locations,
-            741 strings with 10744 characters,
-and the built_in function-call counts, 10481 in all, are:
-= -- 1029
-> -- 509
-< -- 3
-+ -- 199
-- -- 168
-* -- 823
-:= -- 1775
-add.period$ -- 95
-call.type$ -- 31
-change.case$ -- 175
+            758 strings with 11360 characters,
+and the built_in function-call counts, 11472 in all, are:
+= -- 1124
+> -- 560
+< -- 2
++ -- 220
+- -- 186
+* -- 920
+:= -- 1949
+add.period$ -- 103
+call.type$ -- 34
+change.case$ -- 194
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 356
-empty$ -- 798
-format.name$ -- 168
-if$ -- 2132
+cite$ -- 42
+duplicate$ -- 378
+empty$ -- 870
+format.name$ -- 186
+if$ -- 2323
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 31
-newline$ -- 157
-num.names$ -- 64
-pop$ -- 155
+int.to.str$ -- 34
+missing$ -- 34
+newline$ -- 172
+num.names$ -- 68
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 145
+purify$ -- 161
 quote$ -- 0
-skip$ -- 244
+skip$ -- 256
 stack$ -- 0
-substring$ -- 703
-swap$ -- 45
-text.length$ -- 3
+substring$ -- 794
+swap$ -- 40
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 132
 warning$ -- 8
-while$ -- 104
-width$ -- 33
-write$ -- 337
-(There were 5 error messages)
+while$ -- 111
+width$ -- 36
+write$ -- 369
+(There were 4 error messages)
