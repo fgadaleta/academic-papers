@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  20 APR 2014 12:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  20 APR 2014 19:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -558,7 +558,7 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 [] $\OML/cmm/m/it/9 update\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 counter\OT1/cmr/m/n/9
  [\OML/cmm/m/it/9 S\OT1/cmr/m/n/9 ])$ \OT1/ptm/m/n/9 update counters of selecte
 d
@@ -660,13 +660,13 @@ Package epstopdf Info: Source file: <pred_fp.eps>
 (epstopdf)                    size: 9243 bytes
 (epstopdf)             Command: <repstopdf --outfile=pred_fp-eps-converted-to.p
 df pred_fp.eps>
-(epstopdf)             \includegraphics on input line 87.
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
  <pred_fp-eps-converted-to.pdf, id=48, 352.31625pt x 310.15875pt>
 File: pred_fp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fp-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 87.
+Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 89.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <pred_fn.eps>
 (epstopdf)                    date: 2014-04-02 18:06:32
@@ -676,14 +676,14 @@ Package epstopdf Info: Source file: <pred_fn.eps>
 (epstopdf)                    size: 9229 bytes
 (epstopdf)             Command: <repstopdf --outfile=pred_fn-eps-converted-to.p
 df pred_fn.eps>
-(epstopdf)             \includegraphics on input line 93.
+(epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
 <pred_fn-eps-converted-to.pdf, id=49, 352.31625pt x 310.15875pt>
 File: pred_fn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fn-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 93.
+Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 95.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <tp_mcc.eps>
 (epstopdf)                    date: 2014-04-02 18:07:02
@@ -693,14 +693,14 @@ Package epstopdf Info: Source file: <tp_mcc.eps>
 (epstopdf)                    size: 9180 bytes
 (epstopdf)             Command: <repstopdf --outfile=tp_mcc-eps-converted-to.pd
 f tp_mcc.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
 
 <tp_mcc-eps-converted-to.pdf, id=50, 352.31625pt x 310.15875pt>
 File: tp_mcc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use tp_mcc-eps-converted-to.pdf>
-Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 99.
+Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 101.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <fpr.eps>
 (epstopdf)                    date: 2014-04-02 18:07:13
@@ -710,22 +710,22 @@ Package epstopdf Info: Source file: <fpr.eps>
 (epstopdf)                    size: 9237 bytes
 (epstopdf)             Command: <repstopdf --outfile=fpr-eps-converted-to.pdf f
 pr.eps>
-(epstopdf)             \includegraphics on input line 105.
+(epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
 
 <fpr-eps-converted-to.pdf, id=51, 352.31625pt x 310.15875pt>
 File: fpr-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fpr-eps-converted-to.pdf>
-Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 105.
+Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 107.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 85--110
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 87--112
 $[]$$[]$
  []
 
 
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 85--110
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 87--112
 []$$[]$
  []
 
@@ -756,29 +756,27 @@ Underfull \hbox (badness 1817) in paragraph at lines 30--32
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 30--32
-\OT1/ptm/m/n/9 the stability of all discovered interactions and their direction
+Underfull \hbox (badness 2073) in paragraph at lines 30--32
+\OT1/ptm/m/n/9 additional complexity that is plausible to deal with only in
+ []
 
+
+Underfull \hbox (badness 1057) in paragraph at lines 30--32
+\OT1/ptm/m/n/9 complementary data sources of known interactions. Therefore,
  []
 
 ) (./conclusion.tex
-Underfull \hbox (badness 1292) in paragraph at lines 2--4
-\OT1/ptm/m/n/9 We presented LABNet, Lasso-based approach to detect main
- []
-
-
 Underfull \hbox (badness 2903) in paragraph at lines 2--4
 \OT1/ptm/m/n/9 genetic interactions from gene expression profiles. Penalised
  []
 
-) (./document.bbl
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no ¯ in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
-Missing character: There is no ¾ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
 
+Overfull \hbox (1.77046pt too wide) in paragraph at lines 2--4
+\OT1/ptm/m/n/9 regression in concert with a permutation-based procedure determi
+nes
+ []
+
+) (./document.bbl
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
@@ -787,10 +785,16 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [5]
-Missing character: There is no ü in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no ¯ in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no ¾ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Missing character: There is no ü in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -814,24 +818,24 @@ Missing character: There is no ü in font ptmr7t!
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 154.62122pt
+Extra height:10.0pt when 217.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:10.0pt when 155.62122pt
+Extra height:10.0pt when 218.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 156.62122pt
+Extra height:0.0pt when 219.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:156.62122pt Right:156.24243pt Output:156.62122pt
+(2)Left:219.62122pt Right:219.24243pt Output:219.62122pt
 - LAST -
 Extra skip:0.0pt
-Left:156.62122pt
-Right:156.24243pt
-Output:156.62122pt
+Left:219.62122pt
+Right:219.24243pt
+Output:219.62122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -855,7 +859,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  5771 strings out of 493315
  83742 string characters out of 6137905
- 159460 words of memory out of 5000000
+ 161460 words of memory out of 5000000
  9050 multiletter control sequences out of 15000+600000
  51150 words of font info for 104 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
@@ -877,7 +881,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (7 pages, 247909 bytes).
+Output written on document.pdf (7 pages, 247998 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
