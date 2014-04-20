@@ -34,6 +34,12 @@ Bradley Efron, Trevor Hastie, Iain Johnstone, and Robert Tibshirani.
 \newblock Least angle regression.
 \newblock {\em The Annals of Statistics}, 32(2):407--499, 04 2004.
 
+\bibitem{farrar1964multicollinearity}
+D.E. Farrar and R.R. Glauber.
+\newblock {\em Multicollinearity in Regression Analysis: The Problem
+  Revisited}.
+\newblock Working paper (Sloan School of Management). M.I.T., 1964.
+
 \bibitem{finegold}
 Michael Finegold and Mathias Drton.
 \newblock {Robust graphical modeling of gene networks using classical and
@@ -71,6 +77,12 @@ Kei Hirose, Shohei Tateishi, and Sadanori Konishi.
 \newblock Tuning parameter selection in sparse regression modeling.
 \newblock {\em Comput. Stat. Data Anal.}, 59:28--40, March 2013.
 
+\bibitem{wna}
+Steve Horvath.
+\newblock {\em Weighted Network Analysis Applications in Genomics and Systems
+  Biology}, volume~1.
+\newblock Springer, 1 edition, 2011.
+
 \bibitem{microarray_high_noise}
 Klebanov L and Yakovlev.
 \newblock How high is the level of technical noise in microarray data?
@@ -89,6 +101,12 @@ Daniel Marbach, Thomas Schaffter, Claudio Mattiussi, and Dario Floreano.
   {P}erformance {A}ssessment of {R}everse {E}ngineering {M}ethods.
 \newblock {\em Journal of {C}omputational {B}iology}, 16(2):229--239, 2009.
 \newblock WingX.
+
+\bibitem{Matthews1975}
+B.~W. Matthews.
+\newblock {Comparison of the predicted and observed secondary structure of T4
+  phage lysozyme}.
+\newblock {\em Biochim. Biophys. Acta}, 405:442--451, 1975.
 
 \bibitem{Meinshausen_stabilityselection}
 Nicolai Meinshausen and Peter Bühlmann.
@@ -141,6 +159,13 @@ Robert Tibshirani.
 \newblock Regression shrinkage and selection via the lasso.
 \newblock {\em Journal of the Royal Statistical Society, Series B},
   58:267--288, 1994.
+
+\bibitem{multicollinearity_kvs}
+Kristel Van~Steen, Desmond Curran, Jocelyn Kramer, Geert Molenberghs, Ann
+  Van~Vreckem, Andrew Bottomley, and Richard Sylvester.
+\newblock Multicollinearity in prognostic factor analyses using the eortc
+  qlq-c30: identification and impact on model selection.
+\newblock {\em Statistics in Medicine}, 21(24):3865--3884, 2002.
 
 \bibitem{Vidal2011Complex}
 Marc Vidal, Michael~E. Cusick, and Albert-L\'{a}szl\'{o} Barab\'{a}si.

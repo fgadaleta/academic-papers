@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  2 APR 2014 18:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  20 APR 2014 10:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,45 +483,58 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 ) (./introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 
-Underfull \hbox (badness 3049) in paragraph at lines 2--8
+
+Package natbib Warning: Citation `Michalak2008243' on page 1 undefined on input
+ line 6.
+
+
+Package natbib Warning: Citation `YiST07' on page 1 undefined on input line 6.
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 2--12
 \OT1/ptm/m/n/9 components. The study of these interactions is essential to
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 2--8
+Underfull \hbox (badness 1571) in paragraph at lines 2--12
 \OT1/ptm/m/n/9 understanding the mechanisms that regulate complex diseases
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 2--8
+Underfull \hbox (badness 1668) in paragraph at lines 2--12
+\OT1/ptm/m/n/9 and to unravel the functional aspects of genetic compounds.
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 2--12
 \OT1/ptm/m/n/9 that genes act in clusters and their individual effects tend to
  []
 
 
-Overfull \hbox (0.31625pt too wide) in paragraph at lines 9--10
-[]\OT1/ptm/m/n/9 Despite active research in the field of high-density oligonucl
-eotide
+Package natbib Warning: Citation `Goeman2007' on page 1 undefined on input line
+ 16.
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 and investigating the stability of regression models to predict
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 13--16
-\OT1/ptm/m/n/9 of multicollinearity ([], []), namely two or more genes or
+Underfull \hbox (badness 1009) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 the response are two methods that have been denoted in [].
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 13--16
-\OT1/ptm/m/n/9 multicollinearity can influence the performance of regression-
+Underfull \hbox (badness 1565) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 successful forecast with multicollinear variables requires both
  []
 
 
-Underfull \hbox (badness 1314) in paragraph at lines 13--16
-\OT1/ptm/m/n/9 correlation for a subset of genes in the dataset under study.
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 17--18
-\OT1/ptm/m/n/9 issues affecting genetic interactions belongs to the family of
+Underfull \hbox (badness 1365) in paragraph at lines 13--18
+\OT1/ptm/m/n/9 independent variables and stable interdependency relationships
  []
 
 
@@ -539,25 +552,20 @@ LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <7> not available
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-]) (./approach.tex
-Underfull \hbox (badness 2088) in paragraph at lines 8--13
-\OT1/ptm/m/n/9 considered for inferring the association between variables in
+]
+Underfull \hbox (badness 1694) in paragraph at lines 21--22
+\OT1/ptm/m/n/9 as a starting point. We subsequently rely on a permutation-
  []
 
-
-Underfull \hbox (badness 1609) in paragraph at lines 14--16
-\OT1/ptm/m/n/9 such limitation due to the presence of a penalty factor that
- []
-
-
-Underfull \hbox (badness 1748) in paragraph at lines 35--36
+) (./approach.tex
+Underfull \hbox (badness 1748) in paragraph at lines 30--31
 \OT1/ptm/m/n/9 gene, considered as response, with respect to all remaining
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 41.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 41.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -572,19 +580,13 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [2]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 [] $\OML/cmm/m/it/9 update\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 counter\OT1/cmr/m/n/9
  [\OML/cmm/m/it/9 S\OT1/cmr/m/n/9 ])$ \OT1/ptm/m/n/9 update counters of selecte
 d
  []
 
 ) (./results.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 1990) in paragraph at lines 5--6
 \OT1/ptm/m/n/9 data (steady states or time series) ([]). The aforementioned
  []
@@ -605,18 +607,13 @@ Package epstopdf Info: Source file: <degree_barplot.eps>
 (epstopdf)                    date: 2014-04-02 18:16:13
 (epstopdf)                    size: 15393 bytes
 (epstopdf)             Output file: <degree_barplot-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:13:54
+(epstopdf)                    date: 2014-04-02 18:16:29
 (epstopdf)                    size: 11413 bytes
 (epstopdf)             Command: <repstopdf --outfile=degree_barplot-eps-convert
 ed-to.pdf degree_barplot.eps>
 (epstopdf)             \includegraphics on input line 25.
-runsystem(repstopdf --outfile=degree_barplot-eps-converted-to.pdf degree_barplo
-t.eps)...executed safely (allowed).
-
-Package epstopdf Info: Result file: <degree_barplot-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:16:29
-(epstopdf)                    size: 11413 bytes.
-<degree_barplot-eps-converted-to.pdf, id=23, 352.31625pt x 310.15875pt>
+Package epstopdf Info: Output file is already uptodate.
+<degree_barplot-eps-converted-to.pdf, id=24, 352.31625pt x 310.15875pt>
 File: degree_barplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use degree_barplot-eps-converted-to.pdf>
@@ -634,7 +631,7 @@ ted-to.pdf between_barplot.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<between_barplot-eps-converted-to.pdf, id=24, 352.31625pt x 310.15875pt>
+<between_barplot-eps-converted-to.pdf, id=25, 352.31625pt x 310.15875pt>
 File: between_barplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use between_barplot-eps-converted-to.pdf>
@@ -652,14 +649,6 @@ Underfull \hbox (badness 1043) in paragraph at lines 37--39
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 44--46
-\OT1/ptm/m/n/9 permutations (Figure 5[]). Within the same figure the Matthew
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
@@ -668,95 +657,6 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [3]
-Package epstopdf Info: Source file: <pred_fp.eps>
-(epstopdf)                    date: 2014-04-02 18:06:44
-(epstopdf)                    size: 4824 bytes
-(epstopdf)             Output file: <pred_fp-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:09:13
-(epstopdf)                    size: 9243 bytes
-(epstopdf)             Command: <repstopdf --outfile=pred_fp-eps-converted-to.p
-df pred_fp.eps>
-(epstopdf)             \includegraphics on input line 88.
-Package epstopdf Info: Output file is already uptodate.
-
-<pred_fp-eps-converted-to.pdf, id=30, 352.31625pt x 310.15875pt>
-File: pred_fp-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pred_fp-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 88.
-(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
-Package epstopdf Info: Source file: <pred_fn.eps>
-(epstopdf)                    date: 2014-04-02 18:06:32
-(epstopdf)                    size: 4618 bytes
-(epstopdf)             Output file: <pred_fn-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:09:14
-(epstopdf)                    size: 9229 bytes
-(epstopdf)             Command: <repstopdf --outfile=pred_fn-eps-converted-to.p
-df pred_fn.eps>
-(epstopdf)             \includegraphics on input line 94.
-Package epstopdf Info: Output file is already uptodate.
-
-<pred_fn-eps-converted-to.pdf, id=31, 352.31625pt x 310.15875pt>
-File: pred_fn-eps-converted-to.pdf Graphic file (type pdf)
-
-<use pred_fn-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 94.
-(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
-Package epstopdf Info: Source file: <tp_mcc.eps>
-(epstopdf)                    date: 2014-04-02 18:07:02
-(epstopdf)                    size: 4659 bytes
-(epstopdf)             Output file: <tp_mcc-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:09:15
-(epstopdf)                    size: 9180 bytes
-(epstopdf)             Command: <repstopdf --outfile=tp_mcc-eps-converted-to.pd
-f tp_mcc.eps>
-(epstopdf)             \includegraphics on input line 100.
-Package epstopdf Info: Output file is already uptodate.
-
-<tp_mcc-eps-converted-to.pdf, id=32, 352.31625pt x 310.15875pt>
-File: tp_mcc-eps-converted-to.pdf Graphic file (type pdf)
-
-<use tp_mcc-eps-converted-to.pdf>
-Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 100.
-(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
-Package epstopdf Info: Source file: <fpr.eps>
-(epstopdf)                    date: 2014-04-02 18:07:13
-(epstopdf)                    size: 4482 bytes
-(epstopdf)             Output file: <fpr-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-04-02 18:09:17
-(epstopdf)                    size: 9237 bytes
-(epstopdf)             Command: <repstopdf --outfile=fpr-eps-converted-to.pdf f
-pr.eps>
-(epstopdf)             \includegraphics on input line 106.
-Package epstopdf Info: Output file is already uptodate.
-
-<fpr-eps-converted-to.pdf, id=33, 352.31625pt x 310.15875pt>
-File: fpr-eps-converted-to.pdf Graphic file (type pdf)
-
-<use fpr-eps-converted-to.pdf>
-Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 106.
-(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
-
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 86--111
-$[]$$[]$
- []
-
-
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 86--111
-[]$$[]$
- []
-
-) (./discussion.tex
-Underfull \hbox (badness 4556) in paragraph at lines 4--5
-[]\OT1/ptm/m/n/9 As already stated, genetic data are usually affected by
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 4--5
-\OT1/ptm/m/n/9 measurement noise and a high number of variables collected
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -774,35 +674,120 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 
 [4 <./degree_barplot-eps-converted-to.pdf> <./between_barplot-eps-converted-to.
 pdf>]
-Underfull \hbox (badness 2293) in paragraph at lines 24--25
+Package epstopdf Info: Source file: <pred_fp.eps>
+(epstopdf)                    date: 2014-04-02 18:06:44
+(epstopdf)                    size: 4824 bytes
+(epstopdf)             Output file: <pred_fp-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-02 18:09:13
+(epstopdf)                    size: 9243 bytes
+(epstopdf)             Command: <repstopdf --outfile=pred_fp-eps-converted-to.p
+df pred_fp.eps>
+(epstopdf)             \includegraphics on input line 87.
+Package epstopdf Info: Output file is already uptodate.
+ <pred_fp-eps-converted-to.pdf, id=48, 352.31625pt x 310.15875pt>
+File: pred_fp-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pred_fp-eps-converted-to.pdf>
+Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 87.
+(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
+Package epstopdf Info: Source file: <pred_fn.eps>
+(epstopdf)                    date: 2014-04-02 18:06:32
+(epstopdf)                    size: 4618 bytes
+(epstopdf)             Output file: <pred_fn-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-02 18:09:14
+(epstopdf)                    size: 9229 bytes
+(epstopdf)             Command: <repstopdf --outfile=pred_fn-eps-converted-to.p
+df pred_fn.eps>
+(epstopdf)             \includegraphics on input line 93.
+Package epstopdf Info: Output file is already uptodate.
+
+<pred_fn-eps-converted-to.pdf, id=49, 352.31625pt x 310.15875pt>
+File: pred_fn-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pred_fn-eps-converted-to.pdf>
+Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 93.
+(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
+Package epstopdf Info: Source file: <tp_mcc.eps>
+(epstopdf)                    date: 2014-04-02 18:07:02
+(epstopdf)                    size: 4659 bytes
+(epstopdf)             Output file: <tp_mcc-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-02 18:09:15
+(epstopdf)                    size: 9180 bytes
+(epstopdf)             Command: <repstopdf --outfile=tp_mcc-eps-converted-to.pd
+f tp_mcc.eps>
+(epstopdf)             \includegraphics on input line 99.
+Package epstopdf Info: Output file is already uptodate.
+
+<tp_mcc-eps-converted-to.pdf, id=50, 352.31625pt x 310.15875pt>
+File: tp_mcc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use tp_mcc-eps-converted-to.pdf>
+Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 99.
+(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
+Package epstopdf Info: Source file: <fpr.eps>
+(epstopdf)                    date: 2014-04-02 18:07:13
+(epstopdf)                    size: 4482 bytes
+(epstopdf)             Output file: <fpr-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-04-02 18:09:17
+(epstopdf)                    size: 9237 bytes
+(epstopdf)             Command: <repstopdf --outfile=fpr-eps-converted-to.pdf f
+pr.eps>
+(epstopdf)             \includegraphics on input line 105.
+Package epstopdf Info: Output file is already uptodate.
+
+<fpr-eps-converted-to.pdf, id=51, 352.31625pt x 310.15875pt>
+File: fpr-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fpr-eps-converted-to.pdf>
+Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 105.
+(pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
+
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 85--110
+$[]$$[]$
+ []
+
+
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 85--110
+[]$$[]$
+ []
+
+) (./discussion.tex
+Underfull \hbox (badness 2035) in paragraph at lines 2--4
+\OT1/ptm/m/n/9 The Lasso-based procedure performed on microarray data is
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 5--6
+[]\OT1/ptm/m/n/9 As already stated, genetic data are usually affected by
+ []
+
+
+Underfull \hbox (badness 3701) in paragraph at lines 5--6
+\OT1/ptm/m/n/9 measurement noise and high number of variables collected
+ []
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 26--27
 \OT1/ptm/m/n/9 parameter $\OML/cmm/m/it/9 $\OT1/ptm/m/n/9 . To the other extre
 me, a pure ridge-regression
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 24--25
-\OT1/ptm/m/n/9 test, due to the fact that our method ignores the regression
+Package natbib Warning: Citation `GeistlingerCKMZ11' on page 5 undefined on inp
+ut line 28.
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 30--32
+[]\OT1/ptm/m/n/9 Learning the directionality of network edges represents an
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 26--28
-\OT1/ptm/m/n/9 interactions. Therefore, the need for integrating different data
+Underfull \hbox (badness 1442) in paragraph at lines 30--32
+\OT1/ptm/m/n/9 the stability of all discovered interactions and their direction
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (261.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
- [5 <./pred_fp-eps-converted-to.pdf> <./pred_fn-eps-converted-to.pdf> <./tp_mcc
--eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>]) (./conclusion.tex
+) (./conclusion.tex
 Underfull \hbox (badness 4024) in paragraph at lines 2--4
 \OT1/ptm/m/n/9 LABNet is a lasso-based approach to detect main genetic
  []
@@ -814,35 +799,22 @@ Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ¾ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Missing character: There is no ü in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.24243pt when 494.87894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:20.24243pt when 495.87894pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.24243pt when 496.87894pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.24243pt when 497.87894pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:0.0pt when 498.87894pt
-(2)Left:498.87894pt Right:499.75787pt Output:498.87894pt
-(2)Left:499.75787pt Right:499.75787pt Output:499.75787pt
-- LAST -
-Extra skip:0.0pt
-Left:499.75787pt
-Right:499.75787pt
-Output:499.75787pt
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -856,20 +828,59 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[6] (./document.aux)
+[6 <./pred_fp-eps-converted-to.pdf> <./pred_fn-eps-converted-to.pdf> <./tp_mcc-
+eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 136.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:10.0pt when 137.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 138.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:138.62122pt Right:138.24243pt Output:138.62122pt
+- LAST -
+Extra skip:0.0pt
+Left:138.62122pt
+Right:138.24243pt
+Output:138.62122pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [7
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+(./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 5764 strings out of 493315
- 83634 string characters out of 6137905
- 173348 words of memory out of 5000000
- 9043 multiletter control sequences out of 15000+600000
+ 5772 strings out of 493315
+ 83761 string characters out of 6137905
+ 159412 words of memory out of 5000000
+ 9051 multiletter control sequences out of 15000+600000
  51150 words of font info for 104 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
- 38i,11n,38p,1179b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,38p,1301b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/loca
 l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/
@@ -887,10 +898,10 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (6 pages, 239516 bytes).
+Output written on document.pdf (7 pages, 248472 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

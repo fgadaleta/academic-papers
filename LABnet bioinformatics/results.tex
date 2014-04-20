@@ -39,12 +39,11 @@ We measure the connectivity of the network by counting the number of the predict
 
 In Figure \ref{fig:fpr_perm}, the false positive rate, usually referred to as accuracy, is not affected by the number of permutations but by the number of predicted edges which increases accordingly (as shown in Figure \ref{fig:pred_fn}). 
 
-In Figure \ref{fig:pred_fn} the reader can also notice that by increasing the number of permutations the false negatives, or missed edges, tend to decrease. Since higher connected networks are usually affected by an increasing number of false negatives, we consider the method described above a promising approach with potential benefits to the analysis of large genetic networks. 
+Moreover, by increasing the number of permutations the false negatives, or missed edges, tend to decrease (\ref{fig:fpr_perm}). Since higher connected networks are usually affected by an increasing number of false negatives, we consider the method described above a promising approach with potential benefits to the analysis of large genetic networks. 
 
-Another outcome that is worth mentioning regards the true positive rate which follows the same trend of the number of permutations (Figure \ref{fig:tp_mcc}). 
-Within the same figure the Matthew Correlation Coefficient (MCC) is also reported. The MCC is a correlation coefficient between the observed and the predicted classification (presence or absence of edge) and takes into account both true and false negatives of the overall predicted network.
- 
-The MCC has been calculated as 
+We also found that the true positive rate follows the same trend of the number of permutations (Figure \ref{fig:tp_mcc}). Within the same figure the Matthew Correlation Coefficient (MCC) is also reported. The MCC is a correlation coefficient between the observed and the predicted classification (presence or absence of edge) and takes into account both true and false negatives of the overall predicted network. More specifically, the MCC takes into account the number of true negatives of the predicted network within the normalisation factor. For sparse biological networks the number of true negatives is usually high. In an extreme cases of an empty predicted network, the number of true negatives would positively impact the overall performance. It comes without saying that such a metric would be too optimistic. 
+
+The MCC, as introduced in \citealp{Matthews1975}, is calculated as 
 
 \begin{equation}
 MCC = \frac{(TP \times TN) - (FP \times FN)}{\sqrt{\splitfrac{(TP+FP)\times(TP+FN)}{
