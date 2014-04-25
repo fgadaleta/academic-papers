@@ -34,7 +34,12 @@ We perform the approach described above on synthetic microarray data generated f
 \end{figure*}
 
 
-A set of networks has been inferred with an increasing number of permutations. One important characteristic that arises from our experiments consists in the fact that by increasing the number of permutations, the connectivity of the network is increased proportionally (Figure \ref{fig:pred_fp}). Within the same figure it is shown that the number of false positives is limited regardless the number of predicted edges and permutations.   
+For each dataset we perform our approach with an increasing number of permutations to obtain a set of predicted networks. Therefore we compare all the networks with the gold standard provided by GNW. 
+The best network inferred from a microarray of 50 genes and 300 permutations per gene has a precision ($\frac{TP}{TP+FP}$) of 13\% and recall ($\frac{TP}{TP+FN}$) 27\%; the network inferred from a microarray of 200 genes with 2500 permutations per gene has precision of 24\% and recall 44\%. 
+We compared our results to GENIE3 (\citealp{genie3}), the best performer of the DREAM4 challenge that is capable of inferring a network of 1471 genes and unknown transcription factors with precision that never exceeds 6\%.
+We are aware that the number of genes can be detrimental to the overall performance of any predicting method. Moreover, the large number of variables and the required number of permutations per variable would make the computational burden of our approach excessively high. Therefore, we indicate our method to reliably infer genetic associations within networks of limited numbers of covariates.
+
+One important characteristic that arises from our experiments consists in the fact that by increasing the number of permutations, the connectivity of the network is increased proportionally (Figure \ref{fig:pred_fp}). Within the same figure it is shown that the number of false positives is limited regardless the number of predicted edges and permutations.   
 We measure the connectivity of the network by counting the number of the predicted edges. 
 
 In Figure \ref{fig:fpr_perm}, the false positive rate, usually referred to as accuracy, is not affected by the number of permutations but by the number of predicted edges which increases accordingly (as shown in Figure \ref{fig:pred_fn}). 

@@ -96,6 +96,12 @@ Steve Horvath.
   Biology}, volume~1.
 \newblock Springer, 1 edition, 2011.
 
+\bibitem{genie3}
+Vân~Anh Huynh-Thu, Alexandre Irrthum, Louis Wehenkel, and Pierre Geurts.
+\newblock Inferring regulatory networks from expression data using tree-based
+  methods.
+\newblock {\em PLoS ONE}, 5(9):e12776, 09 2010.
+
 \bibitem{microarray_high_noise}
 Klebanov L and Yakovlev.
 \newblock How high is the level of technical noise in microarray data?
