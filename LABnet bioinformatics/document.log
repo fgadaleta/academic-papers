@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  25 APR 2014 17:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  28 APR 2014 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -480,6 +480,11 @@ Underfull \hbox (badness 10000) detected at line 24
 (./abstract.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 2.
+
+Underfull \hbox (badness 3623) in paragraph at lines 2--6
+\OT1/phv/m/n/8 the mechanisms behind complex traits and common genetic
+ []
+
 ) (./introduction.tex
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
@@ -534,16 +539,12 @@ Underfull \hbox (badness 1694) in paragraph at lines 21--22
  []
 
 ) (./approach.tex
-Underfull \hbox (badness 1748) in paragraph at lines 30--31
-\OT1/ptm/m/n/9 gene, considered as response, with respect to all remaining
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 34.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 29.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 34.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 29.
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
@@ -558,6 +559,13 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [2]
+Underfull \hbox (badness 1748) in paragraph at lines 30--31
+\OT1/ptm/m/n/9 gene, considered as response, with respect to all remaining
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+
 Underfull \hbox (badness 10000) in paragraph at lines 48--49
 [] $\OML/cmm/m/it/9 update\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 counter\OT1/cmr/m/n/9
  [\OML/cmm/m/it/9 S\OT1/cmr/m/n/9 ])$ \OT1/ptm/m/n/9 update counters of selecte
@@ -575,6 +583,14 @@ Underfull \hbox (badness 1253) in paragraph at lines 5--6
  []
 
 
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [3]
 Underfull \hbox (badness 5878) in paragraph at lines 7--8
 []\OT1/ptm/m/n/9 We perform the approach described above on synthetic
  []
@@ -591,7 +607,7 @@ Package epstopdf Info: Source file: <degree_barplot.eps>
 ed-to.pdf degree_barplot.eps>
 (epstopdf)             \includegraphics on input line 25.
 Package epstopdf Info: Output file is already uptodate.
-<degree_barplot-eps-converted-to.pdf, id=25, 389.455pt x 230.8625pt>
+<degree_barplot-eps-converted-to.pdf, id=28, 389.455pt x 230.8625pt>
 File: degree_barplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use degree_barplot-eps-converted-to.pdf>
@@ -609,7 +625,7 @@ ted-to.pdf between_barplot.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<between_barplot-eps-converted-to.pdf, id=26, 389.455pt x 230.8625pt>
+<between_barplot-eps-converted-to.pdf, id=29, 389.455pt x 230.8625pt>
 File: between_barplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use between_barplot-eps-converted-to.pdf>
@@ -621,29 +637,6 @@ Overfull \hbox (1.71002pt too wide) in paragraph at lines 23--34
 $[]$ $[]$ 
  []
 
-
-Overfull \hbox (261.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
- [3]
-Overfull \hbox (261.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
-
-Overfull \hbox (261.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-[4 <./degree_barplot-eps-converted-to.pdf> <./between_barplot-eps-converted-to.
-pdf>]
 Package epstopdf Info: Source file: <pred_fp.eps>
 (epstopdf)                    date: 2014-04-25 11:50:41
 (epstopdf)                    size: 4824 bytes
@@ -654,7 +647,7 @@ Package epstopdf Info: Source file: <pred_fp.eps>
 df pred_fp.eps>
 (epstopdf)             \includegraphics on input line 94.
 Package epstopdf Info: Output file is already uptodate.
- <pred_fp-eps-converted-to.pdf, id=48, 352.31625pt x 310.15875pt>
+<pred_fp-eps-converted-to.pdf, id=30, 352.31625pt x 310.15875pt>
 File: pred_fp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fp-eps-converted-to.pdf>
@@ -671,7 +664,7 @@ df pred_fn.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<pred_fn-eps-converted-to.pdf, id=49, 352.31625pt x 310.15875pt>
+<pred_fn-eps-converted-to.pdf, id=31, 352.31625pt x 310.15875pt>
 File: pred_fn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fn-eps-converted-to.pdf>
@@ -688,7 +681,7 @@ f tp_mcc.eps>
 (epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 
-<tp_mcc-eps-converted-to.pdf, id=50, 352.31625pt x 310.15875pt>
+<tp_mcc-eps-converted-to.pdf, id=32, 352.31625pt x 310.15875pt>
 File: tp_mcc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use tp_mcc-eps-converted-to.pdf>
@@ -705,7 +698,7 @@ pr.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<fpr-eps-converted-to.pdf, id=51, 352.31625pt x 310.15875pt>
+<fpr-eps-converted-to.pdf, id=33, 352.31625pt x 310.15875pt>
 File: fpr-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fpr-eps-converted-to.pdf>
@@ -727,6 +720,19 @@ Underfull \hbox (badness 2035) in paragraph at lines 2--4
  []
 
 
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+[4]
 Underfull \hbox (badness 4556) in paragraph at lines 5--6
 []\OT1/ptm/m/n/9 As already stated, genetic data are usually affected by
  []
@@ -768,7 +774,7 @@ Overfull \hbox (1.77046pt too wide) in paragraph at lines 2--4
 nes
  []
 
-) (./document.bbl
+
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
@@ -776,17 +782,27 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
- [5]
+ [5 <./degree_barplot-eps-converted-to.pdf> <./between_barplot-eps-converted-to
+.pdf>])
+(./document.bbl
+Overfull \hbox (1.33868pt too wide) in paragraph at lines 36--1
+\OT1/ptm/m/n/9 in Science and Technology (COST Action #BM1204: EU[]Pancreas).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--1
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ¯ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ¾ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Missing character: There is no ü in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -805,51 +821,86 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 
 [6 <./pred_fp-eps-converted-to.pdf> <./pred_fn-eps-converted-to.pdf> <./tp_mcc-
 eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>]
+Missing character: There is no ü in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:30.24243pt when 231.12122pt
+Extra height:20.24243pt when 326.37894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:30.24243pt when 232.12122pt
+Extra height:20.24243pt when 327.37894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:30.24243pt when 233.12122pt
+Extra height:20.24243pt when 328.37894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:30.24243pt when 234.12122pt
+Extra height:20.24243pt when 329.37894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 235.12122pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:235.12122pt Right:228.24243pt Output:235.12122pt
+Extra height:20.24243pt when 330.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 331.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 332.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 333.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:0.0pt when 334.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+(2)Left:334.37894pt Right:319.75787pt Output:334.37894pt
 - LAST -
 Extra skip:0.0pt
-Left:235.12122pt
-Right:228.24243pt
-Output:235.12122pt
+Left:334.37894pt
+Right:319.75787pt
+Output:334.37894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -861,9 +912,7 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
- [7
-
-]
+ [7]
 (./document.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -873,7 +922,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  5773 strings out of 493315
  83768 string characters out of 6137905
- 162476 words of memory out of 5000000
+ 169476 words of memory out of 5000000
  9052 multiletter control sequences out of 15000+600000
  51150 words of font info for 104 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
@@ -895,7 +944,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (7 pages, 249279 bytes).
+Output written on document.pdf (7 pages, 250918 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
