@@ -34,12 +34,7 @@ We perform the approach described above on synthetic microarray data generated f
 \end{figure*}
 
 
-For each dataset we perform our approach with an increasing number of permutations to obtain a set of predicted networks. Therefore we compare all the networks with the gold standard provided by GNW. 
-The best network inferred from a microarray of 50 genes and 300 permutations per gene has a precision ($\frac{TP}{TP+FP}$) of 13\% and recall ($\frac{TP}{TP+FN}$) 27\%; the network inferred from a microarray of 200 genes with 2500 permutations per gene has precision of 24\% and recall 44\%. 
-We compared our results to GENIE3 (\citealp{genie3}), the best performer of the DREAM4 challenge that is capable of inferring a network of 1471 genes and unknown transcription factors with precision that never exceeds 6\%.
-We are aware that the number of genes can be detrimental to the overall performance of any predicting method. Moreover, the large number of variables and the required number of permutations per variable would make the computational burden of our approach excessively high. Therefore, we indicate our method to reliably infer genetic associations within networks of limited numbers of covariates.
-
-One important characteristic that arises from our experiments consists in the fact that by increasing the number of permutations, the connectivity of the network is increased proportionally (Figure \ref{fig:pred_fp}). Within the same figure it is shown that the number of false positives is limited regardless the number of predicted edges and permutations.   
+A set of networks has been inferred with an increasing number of permutations. One important characteristic that arises from our experiments consists in the fact that by increasing the number of permutations, the connectivity of the network is increased proportionally (Figure \ref{fig:pred_fp}). Within the same figure it is shown that the number of false positives is limited regardless the number of predicted edges and permutations.   
 We measure the connectivity of the network by counting the number of the predicted edges. 
 
 In Figure \ref{fig:fpr_perm}, the false positive rate, usually referred to as accuracy, is not affected by the number of permutations but by the number of predicted edges which increases accordingly (as shown in Figure \ref{fig:pred_fn}). 
@@ -116,4 +111,27 @@ Due to the fact that GNW generates network from real life templates, we expect  
 \label{fig:global}
 \end{figure*}
 
+\subsection{Performance}
+We implemented LABNet in R and we used the \emph{glmnet} package to perform both the Lasso penalty estimation and variable selection. 
+For each gene (node) the algorithm performs a number of permutations to compute the most significant variables associated to the current gene. Therefore, the code that performs such permutations is the most demanding in terms of computing resources and time. The permutation-based variable selection described in the previous section can be performed independently from the rest of the code. As a consequence, the bottleneck of our method seems to be ideally suited for parallel architectures. 
+We implemented a parallel version that consistently improves the overall performance of the algorithm, with respect to its sequential execution.
+The response permutation code has been written to perform within the \emph{snowfall} environment, distributed as R package in CRAN.
+ 
+ A summary of the performance improvement achieved by parallel code is provided in Table \ref{timings}. Moreover, we found that the speedup is more consistent as the number of permutations is increased. 
+ 
+ 
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+\textbf{Genes} & \textbf{Perm} & \textbf{1 CPU} & \textbf{2 CPU} & \textbf{3 CPU} & \textbf{4 CPU} \\ \hline
+               50 & 500      &   269   &      175  &  153   &  135  \\ \hline
+               50 & 1000    &   547  &  347        &  282   &   276  \\ \hline
+               200 &  500   &   2846   &   2073  &  1997  & 1942      \\ \hline
+\end{tabular}
+\vspace{5mm}
+\caption{Timings for 4 different execution of LABNet running in sequential (1 CPU) and parallel environments from 2 to 4 CPUs on general purpose hardware (1.3 GHz Intel Core i5), 4GB RAM. \emph{Perm} indicates the number of permutations per gene }
+\label{timings}
+\end{table}
 
+In a setting with $c$ computing nodes, $p$ genes, $k$ permutations per gene, $T_k$ seconds required to perform $k$ permutations on one computing node, the speedup introduced by the parallel approach can be calculated as 
+$\frac{p T_k}{c}$ \footnote{In the aforementioned formula, the time needed to perform the first selection of covariates and set the computing nodes within the cluster are not counted. Therefore, the expression will indicate better performance than the one we measure effectively in our experiments.}. As the number of available computing nodes approaches the number of covariates, the total time required by our algorithm is determined by the number of permutations performed on the single computing node. 
