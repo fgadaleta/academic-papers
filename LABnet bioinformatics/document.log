@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  29 APR 2014 19:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  29 APR 2014 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -647,6 +647,14 @@ Overfull \hbox (1.71002pt too wide) in paragraph at lines 23--34
 $[]$ $[]$ 
  []
 
+
+Underfull \hbox (badness 1043) in paragraph at lines 37--39
+\OT1/ptm/m/n/9 of permutations, the connectivity of the network is increased
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package epstopdf Info: Source file: <pred_fp.eps>
 (epstopdf)                    date: 2014-04-25 11:50:41
 (epstopdf)                    size: 4824 bytes
@@ -655,13 +663,14 @@ Package epstopdf Info: Source file: <pred_fp.eps>
 (epstopdf)                    size: 9243 bytes
 (epstopdf)             Command: <repstopdf --outfile=pred_fp-eps-converted-to.p
 df pred_fp.eps>
-(epstopdf)             \includegraphics on input line 94.
+(epstopdf)             \includegraphics on input line 89.
 Package epstopdf Info: Output file is already uptodate.
+
 <pred_fp-eps-converted-to.pdf, id=30, 352.31625pt x 310.15875pt>
 File: pred_fp-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fp-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 94.
+Package pdftex.def Info: pred_fp-eps-converted-to.pdf used on input line 89.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <pred_fn.eps>
 (epstopdf)                    date: 2014-04-25 11:50:41
@@ -671,14 +680,14 @@ Package epstopdf Info: Source file: <pred_fn.eps>
 (epstopdf)                    size: 9229 bytes
 (epstopdf)             Command: <repstopdf --outfile=pred_fn-eps-converted-to.p
 df pred_fn.eps>
-(epstopdf)             \includegraphics on input line 100.
+(epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
 
 <pred_fn-eps-converted-to.pdf, id=31, 352.31625pt x 310.15875pt>
 File: pred_fn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pred_fn-eps-converted-to.pdf>
-Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 100.
+Package pdftex.def Info: pred_fn-eps-converted-to.pdf used on input line 95.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <tp_mcc.eps>
 (epstopdf)                    date: 2014-04-25 11:50:41
@@ -688,14 +697,14 @@ Package epstopdf Info: Source file: <tp_mcc.eps>
 (epstopdf)                    size: 9180 bytes
 (epstopdf)             Command: <repstopdf --outfile=tp_mcc-eps-converted-to.pd
 f tp_mcc.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
 
 <tp_mcc-eps-converted-to.pdf, id=32, 352.31625pt x 310.15875pt>
 File: tp_mcc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use tp_mcc-eps-converted-to.pdf>
-Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 106.
+Package pdftex.def Info: tp_mcc-eps-converted-to.pdf used on input line 101.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 Package epstopdf Info: Source file: <fpr.eps>
 (epstopdf)                    date: 2014-04-25 11:50:41
@@ -705,29 +714,47 @@ Package epstopdf Info: Source file: <fpr.eps>
 (epstopdf)                    size: 9237 bytes
 (epstopdf)             Command: <repstopdf --outfile=fpr-eps-converted-to.pdf f
 pr.eps>
-(epstopdf)             \includegraphics on input line 112.
+(epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
 
 <fpr-eps-converted-to.pdf, id=33, 352.31625pt x 310.15875pt>
 File: fpr-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fpr-eps-converted-to.pdf>
-Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 112.
+Package pdftex.def Info: fpr-eps-converted-to.pdf used on input line 107.
 (pdftex.def)             Requested size: 221.76207pt x 195.22594pt.
 
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 92--117
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 87--112
 $[]$$[]$
  []
 
 
-Overfull \hbox (50.40308pt too wide) in paragraph at lines 92--117
+Overfull \hbox (50.40308pt too wide) in paragraph at lines 87--112
 []$$[]$
  []
 
-) (./discussion.tex
-Underfull \hbox (badness 2035) in paragraph at lines 2--4
-\OT1/ptm/m/n/9 The Lasso-based procedure performed on microarray data is
+
+Underfull \hbox (badness 2582) in paragraph at lines 115--119
+\OT1/ptm/m/n/9 For each gene (node) the algorithm performs a number of
  []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 115--119
+\OT1/ptm/m/n/9 to the current gene. Therefore, the code that performs such
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 115--119
+\OT1/ptm/m/n/9 permutations is the most demanding in terms of computing
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 115--119
+\OT1/ptm/m/n/9 resources and time. The permutation-based variable selection
+ []
+
+
+LaTeX Warning: Reference `timings' on page 4 undefined on input line 120.
 
 
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
@@ -742,7 +769,12 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
 
-[4]
+[4]) (./discussion.tex
+Underfull \hbox (badness 2035) in paragraph at lines 2--4
+\OT1/ptm/m/n/9 The Lasso-based procedure performed on microarray data is
+ []
+
+
 Underfull \hbox (badness 4556) in paragraph at lines 5--6
 []\OT1/ptm/m/n/9 As already stated, genetic data are usually affected by
  []
@@ -759,6 +791,15 @@ me, a pure ridge-regression
  []
 
 
+Overfull \hbox (261.0pt too wide) has occurred while \output is active
+[][] 
+ []
+
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [5 <./degree_barplot-eps-converted-to.pdf> <./between_barplot-eps-converted-to
+.pdf>]
 Underfull \hbox (badness 1817) in paragraph at lines 30--32
 []\OT1/ptm/m/n/9 Learning the directionality of network edges represents an
  []
@@ -773,7 +814,11 @@ Underfull \hbox (badness 1057) in paragraph at lines 30--32
 \OT1/ptm/m/n/9 complementary data sources of known interactions. Therefore,
  []
 
-) (./conclusion.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+(./conclusion.tex
 Underfull \hbox (badness 2903) in paragraph at lines 2--4
 \OT1/ptm/m/n/9 genetic interactions from gene expression profiles. Penalised
  []
@@ -785,18 +830,6 @@ nes
  []
 
 
-Overfull \hbox (261.0pt too wide) has occurred while \output is active
-[][] 
- []
-
-
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
- [5 <./degree_barplot-eps-converted-to.pdf> <./between_barplot-eps-converted-to
-.pdf>])
-Missing character: There is no ° in font ptmr7t!
-
-(./document.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -813,7 +846,9 @@ Overfull \hbox (261.0pt too wide) has occurred while \output is active
  []
 
 [6 <./pred_fp-eps-converted-to.pdf> <./pred_fn-eps-converted-to.pdf> <./tp_mcc-
-eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>]
+eps-converted-to.pdf> <./fpr-eps-converted-to.pdf>])
+Missing character: There is no ° in font ptmr7t!
+ (./document.bbl
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ¯ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
@@ -825,33 +860,23 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Extra height:20.24243pt when 344.24243pt
+Extra height:20.24243pt when 516.24243pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:0.0pt when 345.24243pt
+Extra height:20.24243pt when 517.24243pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(2)Left:345.24243pt Right:346.48486pt Output:345.24243pt
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-(2)Left:346.48486pt Right:346.48486pt Output:346.48486pt
+Extra height:20.24243pt when 518.24243pt
+Extra height:0.0pt when 519.24243pt
+(2)Left:519.24243pt Right:517.48486pt Output:519.24243pt
 - LAST -
 Extra skip:0.0pt
-Left:346.48486pt
-Right:346.48486pt
-Output:346.48486pt
+Left:519.24243pt
+Right:517.48486pt
+Output:519.24243pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -869,13 +894,19 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 5773 strings out of 493315
- 83768 string characters out of 6137905
- 170476 words of memory out of 5000000
- 9052 multiletter control sequences out of 15000+600000
- 51150 words of font info for 104 fonts, out of 8000000 for 9000
+ 5779 strings out of 493315
+ 83824 string characters out of 6137905
+ 177476 words of memory out of 5000000
+ 9055 multiletter control sequences out of 15000+600000
+ 55538 words of font info for 109 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
  38i,11n,38p,1301b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -895,7 +926,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (7 pages, 251234 bytes).
+Output written on document.pdf (7 pages, 254667 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream

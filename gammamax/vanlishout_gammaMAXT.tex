@@ -1,0 +1,459 @@
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  vanlishout_gammaMAXT.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+%\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+\documentclass{bmcart}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\usepackage{enumitem}
+\usepackage{bbm}
+%\RequirePackage{natbib}
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\includegraphic{}
+\def\includegraphics{}
+
+
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Getting rid of permutation-based multiple-testing correction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors here                   %%
+%%                                          %%
+%% Specify information, if available,       %%
+%% in the form:                             %%
+%%   <key>={<id1>,<id2>}                    %%
+%%   <key>=                                 %%
+%% Comment or delete the keys which are     %%
+%% not used. Repeat \author command as much %%
+%% as required.                             %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+   addressref={aff1,aff2},                   % id's of addresses, e.g. {aff1,aff2}
+   corref={aff1},                       % id of corresponding address, if any
+   %noteref={n1},                        % id's of article notes, if any
+   email={F.VanLishout@ulg.ac.be}   % email address
+]{\inits{FVL}\fnm{François} \snm{Van Lishout}}
+\author[
+   addressref={aff1,aff2},
+   email={Francesco.Gadaleta@ulg.ac.be}
+]{\inits{FG}\fnm{Francesco} \snm{Gadaleta}}
+\author[
+   addressref={aff3},
+   email={jason.h.moore@dartmouth.edu}
+]{\inits{JHM}\fnm{Jason H} \snm{Moore}}
+\author[
+   addressref={aff1,aff2},
+   email={L.Wehenkel@ulg.ac.be}
+]{\inits{LW}\fnm{Louis} \snm{Wehenkel}}
+\author[
+   addressref={aff1,aff2},
+   email={kristel.vansteen@ulg.ac.be}
+]{\inits{KVS}\fnm{Kristel} \snm{Van Steen}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=aff1]{%                           % unique id
+  \orgname{Systems and Modeling Unit, Montefiore Institute, University of Li\`ege}, % university, etc
+  %\street{},                     %
+  \postcode{4000}                                % post or zip code
+  \city{Li\`ege},                              % city
+  \cny{Belgium}                                    % country
+}
+\address[id=aff2]{%
+  \orgname{Bioinformatics and Modeling, GIGA-R, University of Li\`ege}, % university, etc
+  %\street{},                     %
+  \postcode{4000}                                % post or zip code
+  \city{Li\`ege},                              % city
+  \cny{Belgium}                                    % country
+}
+\address[id=aff3]{%
+  \orgname{Departments of Genetics and Community and Family Medicine, Institute for Quantitative Biomedical Sciences, The Geisel School of Medicine, Dartmouth College, One Medical Center Dr}, % university, etc
+  %\street{},                     %
+  \postcode{03756}                                % post or zip code
+  \city{Lebanon, NH},                              % city
+  \cny{United States of America}                                    % country
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{artnotes}
+%\note{Sample of title note}     % note to the article
+%\note[id=n1]{Equal contributor} % note, connected to author
+\end{artnotes}
+
+\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract} % abstract
+\parttitle{Background} %if any
+The purpose of the maxT algorithm, introduced by Westfall \& Young in 1993, is to control the family-wise error rate (FWER), without being as conservative as a Bonferroni correction. However, this procedure basically multiplies the computing time and memory usage by the amount of permutations. In 2013, the memory issue was solved by Van Lishout's implementation of maxT, which makes the memory usage independent from the size of the problem. This algorithm is implemented in {\em MBMDR-3.0.3}, a software able to identify interaction effects for a variety of epistasis models in a powerful way. It is based on the MB-MDR methodology, a non-parametric data mining method able to distinguish between multiple pure interaction effects and interaction effects induced by important main effects. However, {\em MBMDR-3.0.3} is not able to perform a genome-wide interaction analysis study, because of the computing time issue. We present gammaMAXT, a new algorithm implemented in {\em MBMDR-4.2.0}, a software tool solving this issue.
+
+\parttitle{Results} %if any
+We show that the test-statistics produced by the MB-MDR methodology follow a mixture distribution with a point mass at zero and for positive values a shifted gamma distribution. The parameters of this distribution depend on the particular dataset at hand. With this in mind, we adapt Van Lishout's implementation of maxT, to avoid the need to compute test-statistics for all interactions of each permutation explicitely. We show that the gammaMAXT algorithm reaches a power similar to maxT, but requires a much lower computing time, while still controlling the FWER. In the case of a binary (affected/unaffected) trait, the parallel workflow of {\em MBMDR-4.2.0} analyzes all gene-gene interactions with a dataset of 1 million SNPs typed on 1000 individuals within 4 (?) days, using 999 permutations of the trait to assess statistical significance, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. In the case of a continuous trait, a similar run takes 7 (?) days.
+
+\parttitle{Conclusion} %if any
+In this work, we could successfully replace a permutation-based multiple-testing correction strategy by a semi-analytical approach, in the context of the MB-MDR methodology. In this way, we could win orders of magnitudes of computing time.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}
+\kwd{maxT}
+\kwd{MB-MDR}
+\kwd{multiple-testing}
+\kwd{GWAIs}
+\end{keyword}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+\end{abstractbox}
+%
+%\end{fmbox}% uncomment this for twcolumn layout
+
+\end{frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Main Body begins here                %%
+%%                                          %%
+%% Please refer to the instructions for     %%
+%% authors on:                              %%
+%% http://www.biomedcentral.com/info/authors%%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%% See the Results and Discussion section   %%
+%% for details on how to create sub-sections%%
+%%                                          %%
+%% use \cite{...} to cite references        %%
+%%  \cite{koon} and                         %%
+%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
+%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
+% <put your article body there>
+
+%%%%%%%%%%%%%%%%
+%% Background %%
+%%
+\section*{Introduction}
+
+Nowadays, the time to diagnosis of rare diseases is very long. According to patients surveyed, it takes on average 7.6 years in the US and 5.6 years in the UK to receive a proper diagnosis \cite{Shire2013}. In the mean time, a patient typically visits four primary care doctors, four specialits and receives 2 to 3 misdiagnoses \cite{Shire2013}. A key factor to reduce the time to diagnosis duration is to better understand the genetic origins of complex diseases. Many scientists around the world are focusing on this task and big steps are achieved on a daily basis. This leads to an increasing amount of new healthcares tailored to the individual patients. The era of personalized medicine is comming \cite{Shastry2006, VantVeer2008, Galas2009, Beevers2012, Lester2013}. This paper focuses on genome-wide association interaction studies (GWAIs), whose purpose is to identify pairs of genes and/or environmental factors that increase or dicrease susceptibility to disease.
+
+\section*{Background}
+
+We present {\em MBMDR-4.2.0}, a new software tool implemented in C++, using the Model-Based Multifactor Dimensionality Reduction (MB-MDR) methodology \cite{Calle2008, Calle2008b, Cattaert2011,Mahachie2012}. We compare to {\em MBMDR-3.0.3}, a former version of this software \cite{VanLishout2013}, which greatly enhances MB-MDR's first implementation as an R-package \cite{Calle2010}, both in terms of flexibility and efficiency. In the case of a binary (affected/unaffected) trait, the parallel workflow of {\em MBMDR-3.0.3} analyzes all gene-gene interactions with a dataset of 100,000 SNPs typed on 1000 individuals within 4 (?) days, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. Increasing the amount of SNPs to 1 million approximately multiplies the amount of interactions by 100 and so the computing time. Such a run would thus require about 400(?) days.  {\em MBMDR-4.2.0} performs the same run in 4(?) days.
+
+The heart of the MB-MDR methodology is to identify sets of gene-gene or gene-environment interactions via a series of association tests. Significance of the explored interactions is assessed using the {\em maxT} method \cite{Westfall1993} which provides adjusted p-values by controlling for the multiple correlated tests. This guarantees weak control of the family-wise error rate (FWER) under all conditions and strong control under the subset pivotality assumption \cite{Ge2003}. In practice, only a few p-values will point towards interesting interactions to investigate. With this in mind, Van Lishout's implementation of {\em maxT} adapts the original method so that it still calculates the test-statistics for all SNP pairs, but only computes the p-values of the $n$ best pairs, i.e. the ones with the $n$ lowest p-values \cite{VanLishout2013}. The default value of the software ($n = 1000$) is appropriate when epistasis is tested for in a hypotheses-free way, because it is highly unlikely that more than 1000 significant epistatic pairs will be identified. Note that this value can easily be increased if the context requires it. In this work, we show that the test-statistics produced by the MB-MDR methodology follow a mixture distribution with a point mass at zero and for positive values a shifted gamma distribution. With this in mind, for each permutation, only a sample from the possible interactions is taken. The test-statistics relative to this sample are computed and used to fitt the mixture distribution using the maximum likelihood estimation method. The maximum that would be obtained if all interactions would be explicitely computed is then estimated from this fitted distribution, winning orders of magnitude of computing time.
+
+\section*{Method}
+
+\subsection*{Mixture of distribution behing the test-statistics of the MB-MDR methodology}
+
+MB-MDR is a flexible methodolgy, able to handle a trait expressed on a binary scale, as well as a continuous scale or as a censored trait. Furthermore, it can search for interaction effects in a direct way or correct for lower order effects. This leads to very different test-statistics to assess significance of the epistatic pairs. However, we sustain that a mixture distribution with a point mass at zero and for positive values a shifted gamma distribution is a powerful family to model them. We show the goodness of fitt in eight practical scenarios.
+
+One of the major difference between the MB-MDR methodology and its ancestror MDR [some citations comes here, ask Jason], is the introduction of the ``O'' category in the multi dimensionality reduction process \cite{Calle2008,Cattaert2011}. In MDR, whenever two groups of subjects are compaired (for instance, those having the minor allele for two SNPs versus all other subjects) the first group must be either associated to a higher risk to develop to disease than the second one (``H'' category) or a lower risk (``L'' category). In MB-MDR, there is a third possibility: if the difference is not statistically significant, it can be associated to no evidence for risk change (``O'' category). As a consequence, it can happen that no genotype combination shows any evidence for association with the trait. In this case MB-MDR returns an exact zero. In practice, this happens for the majority of the pairs! To account for this important amount of zeros, we use the same approcach as in \cite{Hautsch2013}. We assign a discrete probability mass to the exact zero value. Hence, if $X$ is a variable returning a random MB-MDR test-statistic, we can define the probabilites $\pi = P(X > 0)$ and $1-\pi = P(X = 0)$. From this, the distribution of $X$ is semicontinuous with a discontinuity at zero, implying the density $f_X(x) = (1-\pi) \delta(x) + \pi g_X(x) \mathbbm{1}_{(x>0)}$, where $\delta(x)$ is a point probability mass at $x=0$ and $\mathbbm{1}_{(x>0)}$ is an indicator function taking the value 1 if $x>0$ and 0 otherwise. The parameter $\pi$ depends on the dataset at hand. Note that the minimum of the non-zero values cannot be too close to zero, because it would correspond to an interaction for which no genotype combination would show any significant association with the trait, which as we have seen would have lead to the ``O'' category for each genotype combination and therefore an exact-zero. For this reason, the distribution of the non-zero values has to be shifted to the right.
+
+{\color{red} This is where Francesco comes in play ... write a text that justifies that a shifted gamma distribution is a good choice in general and especially here. Reference \cite{VanLishout2013} gives for an instance a detailed explanation of how a test-statistic is computed when the trait is binary and no correction is made for the main effects. Start for instance by linking to this and saying simple that the final test-statistic returned by this proecdure is a chi-square. Explain that the family of gamma distribution is powerful enough to model such a test-statistic. Reference \cite{Mahachie2012} shows for instance how MB-MDR can handle a continuous trait and correct for lower-order effects. At the end, the test-statistic is a student t-test. Show again how easily this will be fitted using a gamma.}
+
+All 8 analysis show that $g_X(x)$ is the density function of a shifted gamma distribution, i.e. $g_X(x) = \frac{(x-\gamma)^{k-1}e^{\frac{x-\gamma}{\theta}}}{\theta^k\Gamma(k)}$, where $k$, $\theta$ and $\gamma$ are respectively the shape, scale and location parameters. 
+
+We show now the goodness of fitt in eight practical scenarios. We run MBMDR-4.2.0 on 4 different datasets and adapt the source code to store every single test-statistics generated by the program into a file. We consider four datasets:
+
+\begin{itemize}
+\item A simulated dataset $D_1$, for which the trait is expressed on a binary scale. This dataset is composed of 100,000 SNPs and 1000 individuals (500 cases and 500 controls). It was generated using GAMETES, a fast, direct algorithm for generating pure, strict, epistatic models with random architectures \cite{gametes2012}.
+\item A real-life dataset $D_2$, for which the trait is expressed on a binary scale ... still to be discussed with Kristel...
+\item A simulated dataset $D_3$, for which the trait is expressed on a continuous scale. This dataset is composed of 100,000 SNPs and 1000 individuals. ... explain the model ...
+\item A real-life dataset $D_4$, for which the trait is expressed on a continuous scale ... still to be discussed with Kristel ... (so far, I used one of Elena's big datasets)
+\end{itemize}
+
+We analyze each datasets with two typical settings of MBMDR-4.2.0:
+\begin{itemize}
+\item Setting $S_1$ (default parameters): the programs makes a codominant correction for the main effects of each SNP.
+\item Setting $S_2$ (option "-a NONE"): the program does not make any adjustment for the main effects of the SNPs.
+\end{itemize}
+
+\smallskip
+
+{\color{red} Text by Francesco to show that the non-zero values of the 8 possible combinations of datasets and settings, follow a shifted gamma distribution ... I will send the 8 files ... also explain that we are in fact interested in the tail of the distribution and that this is the part of the distribution that we need to fitt as precisely as possible, not the middle or the head ... please produce a figure composed of 8 plots, comparing each time the observed data and the fitted distribution ...}
+
+\subsection*{The gammaMAXT algorithm}
+
+Figure 1 describes the difference between three algorithms: the original maxT, Van Lishout's maxT and the new gammaMAXT. The different steps of Van Lishout's maxT are given below: 
+
+\begin{enumerate}
+\item Compute the test-statistics for all $m$ pairs, but store only the $n$ highest ones. The result is a {\em Real data} vector where $T_{0,1} \ge T_{0,2} \ge \ldots \ge T_{0,n}$.
+\item Initialize a vector $a$ of size $n$ with 1's.
+\item Perform the following operations for $i=1,\ldots,B$: 
+\begin{enumerate}
+\item Generate a random permutation of the trait column. 
+\item Compute the test-statistics $T_{i,1}, \ldots, T_{i,n}$ and store them in a {\em Permutation$_i$} vector.
+\item Compute the maximum $M_i$ of the test-statistics values $T_{i,n+1}, \ldots, T_{i,m}$.
+\item Replace $T_{i,n}$ by $M_i$ if $T_{i,n} < M_i$.
+\item Force the monotonicity of the {\em Permutation$_i$} vector: for $j = n-1,\ldots,1$ replace $T_{i,j}$ by $T_{i,j+1}$ if $T_{i,j} < T_{i,j+1}$. 
+\item For each $j = 1, \ldots, n$, if $T_{i,j} \ge T_{0,j}$ increment $a_j$ by one.
+\end{enumerate}
+\item Divide all values of vector $a$ by $B+1$ to obtain the {\em p-values} vector $p$. Force monotonicity as follows: for $j = 1,\ldots,n-1$, replace $p_{j+1}$ by $p_{j}$ if $p_{j+1} < p_j$.
+\end{enumerate}
+
+\medskip
+
+For big datasets, the bottelneck of this procedure is step 3 (c). Consider for instance a dataset of 1 million SNPs, i.e. m=$5$x$10^{11}$ interactions, analyzed with the default settings of the software ($n=1000$, $B=999$). Steps involving $n$ but not $m$ are not really time consuming, since $n << m$. Therefore, only step 1 and 3(c) remains. The former is performed only once and will require $O(10^{11})$ test-statistic computations, whereas the later is performed 999 times and will require $O(10^{14})$. Therefore, the gammaMAXT algorithm is exactly the same as Van Lishout's implementation of maxT, except for step 3 (c) which is replaced by the following operation:
+
+\begin{enumerate}
+\item[3 (c)] Estimate the maximum $M_i$ of the test-statistics values $T_{i,n+1}, \ldots, T_{i,m}$.
+\begin{enumerate}[label=\roman*]
+\item Initialize an integer $z$ to 0 and create a vector $sample$ of size N = 100,000.
+\item Select an index $r$ at random in $[n+1,m]$ and compute $T_{i,r}$
+\item If $T_{i,r} = 0$, increase $z$, otherwise, store $T_{i,r}$ in an empty cell of to the vector $sample$
+\item Repeat steps ii. and iii. until the vector $sample$ is full.
+\item Estimate the parameter $\pi$ by $\frac{N}{z + N}$. As a consequence, the amount of non-zeros in $T_{i,n+1}, \ldots, T_{i,m}$ is estimated by $\pi \times (m-n)$
+\item Estimate the location parameter $\gamma$ by the minimum of the vector $sample$
+\item Estimate the shape $k$ and the scale $\theta$ using the maximum likelihood estimation method (see below for the exact procedure).
+\item Estimate the maximum $M_i$ that would be obtained, if we would take a sample of size $z$ from a random variable following the fitted shifted gamma distribution (see below for the exact procedure).
+\end{enumerate}
+\end{enumerate}
+
+To estimate the parameters $k$ and $\theta$, knowing the location parameter $\gamma$, we define $s = ln (\frac{1}{N} \sum\limits_{i=1}^{N} (x_i-\gamma)) - \frac{1}{N} \sum\limits_{i=1}^{N} ln(x_i-\gamma)$, then $k \approx \frac{3-s+\sqrt{(s-3)^2 + 24s}}{12s}$ is within 1.5\% of the correct value \cite{Minka2002}. A Newton-Raphson update of this initial guess is then computed by $k \leftarrow k - \frac{ln(k) - \psi(k) - s}{\frac{1}{k} - \psi'(k)}$, where $\psi(k)$ and $\psi'(k)$ are respectively the digamma and trigamma functions \cite{Choi1969}. Finally, the maximum likelihood estimator of $\theta$ is given by $\frac{1}{kN}\sum\limits_{i=1}^{N} (x_i-\gamma)$. At this point, we test this procedure on the 4 datasets $D_1, ..., D_4$ of the previous section, using the settings $S_1$ and $S_2$. In all case, we observe that the fitted parameters are approximately the same for all permutations. An analogous observation was noticed in a similar work, based on hypothesis testing using an extreme value distribution \cite{Pattin2009}. With this in mind, we adapt the gammaMAXT algorithm such that it does not fitt new parameters for each single permutation, but only for 1 out of 20. This is a compromise between winning computing-time (an order of magnitude) and being robust (not relying on a single fitting).
+
+The cumulative distribution function of a shifted gamma distribution is given by $F(x) = \frac{\Gamma_x(k,\frac{x-\gamma}{\theta})}{\Gamma(k)}$, where $\Gamma_x(k,\frac{x-\gamma}{\theta})$ is the lower incomplete gamma function, defined by $\int_0^{\frac{x-\gamma}{\theta}}t^{k-1}e^{-t} dt$. By definition, if we sample one value from this distribution, the probability that its value is lower than a particular threshold $x_t$ is given by $\frac{\Gamma_x(k,\frac{x_t-\gamma}{\theta})}{\Gamma(k)}$. Therefore, if we sample $z$ independent and identically distributed (i.i.d.) values, the probability that the maximum of the $(x_1, x_2, ..., x_z)$ sample is lower than $x_t$ is given by $P[(x_0 \le x_t)\wedge(x_1 \le x_t) \wedge ... \wedge (x_z \le x_t)] = [\frac{\Gamma_x(k,\frac{x_0-\gamma}{\theta})}{\Gamma(k)}]^z$. A first attempt to predict $M_i$ is thus to compute its expected median $m_t$, defined by $m_t: [\frac{\Gamma_x(k,\frac{m_t-\gamma}{\theta})}{\Gamma(k)}]^z = 0,5$. The problem of this approach is that all permutations will lead to approximately the same value, since all shifted gamma distributions are approximately the same. This would not mimic the maxT algorithm at all! The idea of the later is to produce a sample representing the distribution of the maxima under the null, against which the maximum of the original data can be compared to. To achieve a similar behaviour, we chose to generate a particular sample: the B-quantiles (999-quantiles with the default settings). In this way, we describe the distribution of the maxima under the null smoothly. Our final prediction of $M_i$ is thus the $i^{th}$ B-quantile, defined by $M_i: [\frac{\Gamma_x(k,\frac{M_i-\gamma}{\theta})}{\Gamma(k)}]^z = \frac{i}{B+1}$. Solving this equation is far from trivial. However, the gamma and the lower incomplete gamma functions are pre-implemented in C++. For this reason, we have implemented a dichotomous search for $M_i$:
+\begin{enumerate}[label=(\alph*)]
+\item Initialize a variable $y$ to a value that is obviously much higher than $M_i$ (default: 1000) and a variable $step$ to half of this value (default: 500).
+\item Compute $p_g = [\frac{\Gamma_x(k,\frac{y-\gamma}{\theta})}{\Gamma(k)}]^z$.
+\item If $p_g$ is lower (higher) than $\frac{i}{B+1}$, increase (decrease) $y$ by $step$.
+\item Divide $step$ by 2.
+\item Repeat steps (b), (c) and (d) until $step$ is below the desired precision (default: 0.000001).
+\item Return the final value of $y$, our final prediction of $M_i$.
+\end{enumerate}
+
+For big datasets, the bottelneck of the gammaMAXT algorithm is now step 1. Indeed, consider again a dataset of 1 million SNPs analyzed with the default settings of the software. Step 1 did not change and still requires $O(10^{11})$ test-statistic computations. Step 3 (c) however, is still performed 999 times, but only 1 out of 20 permutations, i.e. 50, will lead to a fitting of the shifted gamma distribution involving 100,000 test-statistic computations. This implies $O(10^6)$ instead of $O(10^{14})$ with Van Lishout's implementation of maxT!
+
+\subsection*{Parallel workflow}
+The parallel workflow of Van Lishout's implementation of maxT only parallelizes step 3 \cite{VanLishout2013}. Since the bottelneck of the new algorithm is step 1, we will now parallelize this step as well. Figure 2 describes the four steps of the new parallel workflow:
+
+\begin{enumerate}
+\item Split the computation of the $m$ test-statistics of step 1 between $C$ machine. To achieve an approximately homogeneous split, compute on each machine $c=1\ldots C$ the pairs for which the modulo of the index of the first SNP is equal to $c-1$ and save the $n$ highest results ones into a file {\em topc.txt}.
+\item When all machines have terminated their computations, read the files $top1.txt\ldots topC.txt$ on one machine and retrieve the $n$ highest values amoung these files. Save the result into a file {\em topfile.txt}. This file will contain the information of the {\em Real Data} vector of Figure 1.
+\item Split the computation of the permutations homogeneously between the $C$ machines. On each machine $c=1\ldots C$, perform the following operations: 
+\begin{enumerate}
+\item Read the file {\em topfile.txt}
+\item Initialize a vector $p$ of size $n$ with 0's.
+\item Execute step 3 of Van Lishout's {\em maxT} algorithm for each permutation assigned to $c$ (using vector $p$ instead of $a$).
+\item Save the $p$ vector into a file $permut$c$.txt$. 
+\end{enumerate}
+\item When all machines have terminated their work, sum all vectors of the files $permut1.txt\ldots permutC.txt$ to obtain a vector $p$. Add 1 to all elements of this vector. Perform step 4 of the {\em gammaMAXT} algorithm on $p$.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{backmatter}
+
+\section*{Competing interests}
+  The authors declare that they have no competing interests.
+
+\section*{Author's contributions}
+    Text for this section \ldots
+
+\section*{Acknowledgements}
+  Text for this section \ldots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if your bibliography is in bibtex format, use those commands:
+\bibliographystyle{bmc-mathphys} % Style BST file
+\bibliography{vanlishout_gammaMAXT}      % Bibliography file (usually '*.bib' )
+
+% or include bibliography directly:
+% \begin{thebibliography}
+% \bibitem{b1}
+% \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Figures                       %%
+%%                               %%
+%% NB: this is for captions and  %%
+%% Titles. All graphics must be  %%
+%% submitted separately and NOT  %%
+%% included in the Tex document  %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Do not use \listoffigures as most will included as separate files
+
+\section*{Figures}
+  \begin{figure}[h!]
+  \caption{\csentence{Classical versus Van Lishout's implementation of maxT and gammaMAXT}
+In the classical {\em maxT} implementation, all $T_{i,j}$ values are computed and put in memory. In Van Lishout's implementation of {\em maxT}, all $T_{i,j}$ values are computed but only the maximum $M_1,\ldots,M_B$ of the $[T_{1,n+1}, \ldots, T_{1,m}], \ldots, [T_{B,n+1}, \ldots, T_{B,m}]$ are stored in memory. In gammaMAXT, only a sample from each $[T_{1,n+1}, \ldots, T_{1,m}], \ldots, [T_{B,n+1}, \ldots, T_{B,m}]$ is computed and used to predic the maximum $M_1,\ldots,M_B$.}
+      \end{figure}
+
+  \begin{figure}[h!]
+  \caption{\csentence{\em MBMDR-4.2.0} parallel workflow}
+The computation of the test-statistics is first split between the available machines ... Finally, {\em MBMDR-4.2.0} reads the produced $permut?.txt$ files to create the final output file.
+      \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Tables                        %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Use of \listoftables is discouraged.
+%%
+\section*{Tables}
+
+\begin{table}[h!]
+\caption{Sample table title. This is where the description of the table should go.}
+      \begin{tabular}{cccc}
+        \hline
+           & B1  &B2   & B3\\ \hline
+        A1 & 0.1 & 0.2 & 0.3\\
+        A2 & ... & ..  & .\\
+        A3 & ..  & .   & .\\ \hline
+      \end{tabular}
+\end{table}
+
+
+\end{backmatter}
+\end{document}
