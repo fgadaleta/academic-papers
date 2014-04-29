@@ -98,7 +98,8 @@
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Getting rid of permutation-based multiple-testing correction}
+\title{gammaMAXt: a fast multiple-testing correction in genetics}
+%Getting rid of permutation-based multiple-testing correction
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -196,13 +197,19 @@
 
 \begin{abstract} % abstract
 \parttitle{Background} %if any
-The purpose of the maxT algorithm, introduced by Westfall \& Young in 1993, is to control the family-wise error rate (FWER), without being as conservative as a Bonferroni correction. However, this procedure basically multiplies the computing time and memory usage by the amount of permutations. In 2013, the memory issue was solved by Van Lishout's implementation of maxT, which makes the memory usage independent from the size of the problem. This algorithm is implemented in {\em MBMDR-3.0.3}, a software able to identify interaction effects for a variety of epistasis models in a powerful way. It is based on the MB-MDR methodology, a non-parametric data mining method able to distinguish between multiple pure interaction effects and interaction effects induced by important main effects. However, {\em MBMDR-3.0.3} is not able to perform a genome-wide interaction analysis study, because of the computing time issue. We present gammaMAXT, a new algorithm implemented in {\em MBMDR-4.2.0}, a software tool solving this issue.
+The purpose of the maxT algorithm, introduced by Westfall \& Young in 1993, is to control the family-wise error rate (FWER), being less conservative than the Bonferroni correction. However, this procedure increases the computational burden required by the number of permutations. 
+
+(FIXME) In 2013, the memory issue was solved by Van Lishout's implementation of maxT, which makes the memory usage independent from the size of the problem. This algorithm is implemented in {\em MBMDR-3.0.3}, a software able to identify interaction effects for a variety of epistasis models in a powerful way. It is based on the MB-MDR methodology, a non-parametric data mining method able to distinguish between multiple pure interaction effects and interaction effects induced by important main effects. However, {\em MBMDR-3.0.3} is not able to perform a genome-wide interaction analysis study, because of the computing time issue.
+ 
+We present \emph{gammaMAXT}, a novel algorithm that overrides the aforementioned issues and can be considered for genome-wide interaction analyses. We implemented the new algorithm within the software framework {\em MBMDR-4.2.0}. 
 
 \parttitle{Results} %if any
-We show that the test-statistics produced by the MB-MDR methodology follow a mixture distribution with a point mass at zero and for positive values a shifted gamma distribution. The parameters of this distribution depend on the particular dataset at hand. With this in mind, we adapt Van Lishout's implementation of maxT, to avoid the need to compute test-statistics for all interactions of each permutation explicitely. We show that the gammaMAXT algorithm reaches a power similar to maxT, but requires a much lower computing time, while still controlling the FWER. In the case of a binary (affected/unaffected) trait, the parallel workflow of {\em MBMDR-4.2.0} analyzes all gene-gene interactions with a dataset of 1 million SNPs typed on 1000 individuals within 4 (?) days, using 999 permutations of the trait to assess statistical significance, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. In the case of a continuous trait, a similar run takes 7 (?) days.
+We show that the test-statistics produced by the MB-MDR methodology follows a mixture distribution with a point mass around zero and a shifted gamma distribution for the other positive values. The parameters of this distribution are data dependent. In the work described here we adapt Van Lishout's implementation of maxT with the purpose of avoiding the computation of the test-statistics required for all interactions and dependent on the number of permutations. 
+We show that our gammaMAXT algorithm has a power that is comparable to the one of maxT, while requiring less computing resources and time. Moreover, we are still capable of controlling the FWER. 
+For binary traits (affected/unaffected), the parallel workflow of {\em MBMDR-4.2.0} analyses all gene-gene interactions with a dataset of 1 million SNPs typed on 1000 individuals within 4 (?) days, using 1000 permutations of the trait variable to assess statistical significance, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. In the case of a continuous trait, a similar run takes 7 (?) days. (FIXME)
 
 \parttitle{Conclusion} %if any
-In this work, we could successfully replace a permutation-based multiple-testing correction strategy by a semi-analytical approach, in the context of the MB-MDR methodology. In this way, we could win orders of magnitudes of computing time.
+In this work, we successfully replaced a permutation-based multiple-testing correction strategy with a semi-analytical approach. The overall performance of our method is several orders of magnitudes better than the previous approach. 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -260,12 +267,23 @@ In this work, we could successfully replace a permutation-based multiple-testing
 %% Background %%
 %%
 \section*{Introduction}
-
-Nowadays, the time to diagnosis of rare diseases is very long. According to patients surveyed, it takes on average 7.6 years in the US and 5.6 years in the UK to receive a proper diagnosis \cite{Shire2013}. In the mean time, a patient typically visits four primary care doctors, four specialits and receives 2 to 3 misdiagnoses \cite{Shire2013}. A key factor to reduce the time to diagnosis duration is to better understand the genetic origins of complex diseases. Many scientists around the world are focusing on this task and big steps are achieved on a daily basis. This leads to an increasing amount of new healthcares tailored to the individual patients. The era of personalized medicine is comming \cite{Shastry2006, VantVeer2008, Galas2009, Beevers2012, Lester2013}. This paper focuses on genome-wide association interaction studies (GWAIs), whose purpose is to identify pairs of genes and/or environmental factors that increase or dicrease susceptibility to disease.
+The time that is currently required to diagnose rare diseases is quite long. According to a result refs. in which patients have been surveyed for FIXME, it takes on average 7.6 years in US and 5.6 years in UK to receive a proper diagnosis \cite{Shire2013}. In the mean time, the average patient might visit a number of primary care doctors, specialists to receives up to three misdiagnoses \cite{Shire2013}. Understanding the genetic origins of complex diseases might be the key to reduce the time of diagnosis. An increasing number of scientists and resources is being addressed to unravel the complex mechanisms that regulate genetic disorders.
+A trend that can pave the way to draw better conclusions about the aforementioned mechanisms is represented by personalised medicine.   
+%This leads to an increasing amount of new healthcares tailored to the individual patients. refs?
+%The era of personalized medicine is comming 
+\cite{Shastry2006, VantVeer2008, Galas2009, Beevers2012, Lester2013}. This work focuses on genome-wide association interaction studies (GWAIs), with the purpose of identifying pairs of genes and/or environmental factors that regulate  susceptibility to disease.
 
 \section*{Background}
+Starting from the Model-Based Multifactor Dimensionality Reduction methodology \cite{Calle2008, Calle2008b, Cattaert2011,Mahachie2012}, we implemented a new software package that consistently increases the performance of its predecessor. 
 
-We present {\em MBMDR-4.2.0}, a new software tool implemented in C++, using the Model-Based Multifactor Dimensionality Reduction (MB-MDR) methodology \cite{Calle2008, Calle2008b, Cattaert2011,Mahachie2012}. We compare to {\em MBMDR-3.0.3}, a former version of this software \cite{VanLishout2013}, which greatly enhances MB-MDR's first implementation as an R-package \cite{Calle2010}, both in terms of flexibility and efficiency. In the case of a binary (affected/unaffected) trait, the parallel workflow of {\em MBMDR-3.0.3} analyzes all gene-gene interactions with a dataset of 100,000 SNPs typed on 1000 individuals within 4 (?) days, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. Increasing the amount of SNPs to 1 million approximately multiplies the amount of interactions by 100 and so the computing time. Such a run would thus require about 400(?) days.  {\em MBMDR-4.2.0} performs the same run in 4(?) days.
+%tool implemented in C++
+
+
+We present a new software, using the Model-Based Multifactor Dimensionality Reduction (MB-MDR) methodology \cite{Calle2008, Calle2008b, Cattaert2011,Mahachie2012}. We compare to {\em MBMDR-3.0.3}, a former version of this software \cite{VanLishout2013}, which greatly enhances MB-MDR's first implementation as an R-package \cite{Calle2010}, both in terms of flexibility and efficiency. 
+FIXME No need to write the whole history of the software that has been written. We really don't care ;)
+
+
+In the case of a binary (affected/unaffected) trait, the parallel workflow of {\em MBMDR-3.0.3} analyzes all gene-gene interactions with a dataset of 100,000 SNPs typed on 1000 individuals within 4 (?) days, on a cluster composed of 32 blades, containing each two quadcore Intel L5420 2.5 GHz. Increasing the amount of SNPs to 1 million approximately multiplies the amount of interactions by 100 and so the computing time. Such a run would thus require about 400(?) days.  {\em MBMDR-4.2.0} performs the same run in 4(?) days.
 
 The heart of the MB-MDR methodology is to identify sets of gene-gene or gene-environment interactions via a series of association tests. Significance of the explored interactions is assessed using the {\em maxT} method \cite{Westfall1993} which provides adjusted p-values by controlling for the multiple correlated tests. This guarantees weak control of the family-wise error rate (FWER) under all conditions and strong control under the subset pivotality assumption \cite{Ge2003}. In practice, only a few p-values will point towards interesting interactions to investigate. With this in mind, Van Lishout's implementation of {\em maxT} adapts the original method so that it still calculates the test-statistics for all SNP pairs, but only computes the p-values of the $n$ best pairs, i.e. the ones with the $n$ lowest p-values \cite{VanLishout2013}. The default value of the software ($n = 1000$) is appropriate when epistasis is tested for in a hypotheses-free way, because it is highly unlikely that more than 1000 significant epistatic pairs will be identified. Note that this value can easily be increased if the context requires it. In this work, we show that the test-statistics produced by the MB-MDR methodology follow a mixture distribution with a point mass at zero and for positive values a shifted gamma distribution. With this in mind, for each permutation, only a sample from the possible interactions is taken. The test-statistics relative to this sample are computed and used to fitt the mixture distribution using the maximum likelihood estimation method. The maximum that would be obtained if all interactions would be explicitely computed is then estimated from this fitted distribution, winning orders of magnitude of computing time.
 
