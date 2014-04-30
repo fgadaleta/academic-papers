@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  29 APR 2014 22:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  30 APR 2014 08:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,26 +463,26 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 
 ]
 [2]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 296.
+LaTeX Font Info:    Try loading font information for U+bbm on input line 295.
  (/usr/local/texlive/2013/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 305.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 304.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 304.
 
-Overfull \hbox (3.02684pt too wide) in paragraph at lines 331--332
+Overfull \hbox (3.02684pt too wide) in paragraph at lines 330--331
 []\OT1/cmr/m/n/10 Compute the test-statistics $\OML/cmm/m/it/10 T[]; [] ; T[]$ 
 \OT1/cmr/m/n/10 and store them in a \OT1/cmr/m/it/10 Permutation$[]$
  []
 
 [4] [5]
-Underfull \hbox (badness 836) in paragraph at lines 377--378
+Underfull \hbox (badness 836) in paragraph at lines 376--377
 []\OT1/cmr/m/n/10 When all ma-chines have ter-mi-nated their com-pu-ta-tions, r
 ead the files
  []
@@ -490,11 +490,11 @@ ead the files
 [6] (./vanlishout_gammaMAXT.bbl [7])
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 450.
+(Font)              using `OT1/cmss/bx/n' instead on input line 449.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 451.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 450.
 
 
 
@@ -515,7 +515,7 @@ Here is how much of TeX's memory you used:
  6769 multiletter control sequences out of 15000+600000
  13323 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 30i,10n,37p,2158b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,9n,37p,2158b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/frag/Library/texlive/2013/texmf-var/fonts/pk/ljfour/public/bbm/bbm10
 .600pk></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
 0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10
@@ -538,7 +538,7 @@ e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive
 13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2013
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on vanlishout_gammaMAXT.pdf (8 pages, 259632 bytes).
+Output written on vanlishout_gammaMAXT.pdf (8 pages, 259842 bytes).
 PDF statistics:
  120 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
