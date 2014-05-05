@@ -67,12 +67,6 @@ Ludwig Geistlinger, Gergely Csaba, Robert Küffner, Nicola~J. Mulder, and Ralf
   transcriptomic systems.
 \newblock {\em Bioinformatics [ISMB/ECCB]}, 27(13):366--373, 2011.
 
-\bibitem{Goeman2007}
-J~J Goeman and P~B{\"u}hlmann.
-\newblock Analyzing gene expression data in terms of gene sets: methodological
-  issues.
-\newblock {\em Bioinformatics}, 23(8):980--987, April 2007.
-
 \bibitem{genesets}
 J~J Goeman and P~B{\"u}hlmann.
 \newblock Analyzing gene expression data in terms of gene sets: methodological
@@ -95,12 +89,6 @@ Steve Horvath.
 \newblock {\em Weighted Network Analysis Applications in Genomics and Systems
   Biology}, volume~1.
 \newblock Springer, 1 edition, 2011.
-
-\bibitem{genie3}
-VÃ¢n~Anh Huynh-Thu, Alexandre Irrthum, Louis Wehenkel, and Pierre Geurts.
-\newblock Inferring regulatory networks from expression data using tree-based
-  methods.
-\newblock {\em PLoS ONE}, 5(9):e12776, 09 2010.
 
 \bibitem{microarray_high_noise}
 Klebanov L and Yakovlev.

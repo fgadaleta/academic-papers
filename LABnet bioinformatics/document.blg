@@ -5,13 +5,14 @@ The style file: plain.bst
 format.doi is an unknown function---line 1107 of file plain.bst
 format.url is an unknown function---line 1109 of file plain.bst
 Database file #1: lassonetwork.bib
-I was expecting a `,' or a `}'---line 328 of file lassonetwork.bib
+I was expecting a `,' or a `}'---line 305 of file lassonetwork.bib
  : 
  : TITLE = {A simple linear regression method for quantitative trait loci linkage analysis with censored observations.},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 A bad cross reference---entry "netmotif"
 refers to entry "conf/cibcb/2005", which doesn't exist
+Warning--I didn't find a database entry for "Goeman2007"
 Warning--I didn't find a database entry for "conf/cibcb/2005"
 Warning--empty title in linregression2
 Warning--empty journal in linregression2
@@ -21,45 +22,45 @@ Warning--empty location in wna
 Warning--empty journal in microarray_high_noise
 Warning--empty institution in Meinshausen_stabilityselection
 Warning--empty year in Meinshausen_stabilityselection
-You've used 35 entries,
+You've used 33 entries,
             2137 wiz_defined-function locations,
-            765 strings with 11606 characters,
-and the built_in function-call counts, 11847 in all, are:
-= -- 1158
-> -- 583
+            758 strings with 11360 characters,
+and the built_in function-call counts, 11147 in all, are:
+= -- 1092
+> -- 547
 < -- 2
-+ -- 229
-- -- 194
-* -- 955
-:= -- 2014
-add.period$ -- 106
-call.type$ -- 35
-change.case$ -- 201
++ -- 215
+- -- 182
+* -- 893
+:= -- 1895
+add.period$ -- 100
+call.type$ -- 33
+change.case$ -- 189
 chr.to.int$ -- 0
-cite$ -- 43
-duplicate$ -- 389
-empty$ -- 896
-format.name$ -- 194
-if$ -- 2397
+cite$ -- 41
+duplicate$ -- 367
+empty$ -- 843
+format.name$ -- 182
+if$ -- 2255
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 35
-newline$ -- 177
-num.names$ -- 70
-pop$ -- 168
+int.to.str$ -- 33
+missing$ -- 33
+newline$ -- 167
+num.names$ -- 66
+pop$ -- 160
 preamble$ -- 1
-purify$ -- 167
+purify$ -- 157
 quote$ -- 0
-skip$ -- 263
+skip$ -- 248
 stack$ -- 0
-substring$ -- 817
-swap$ -- 41
+substring$ -- 768
+swap$ -- 39
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
+type$ -- 128
 warning$ -- 8
-while$ -- 114
-width$ -- 37
-write$ -- 380
+while$ -- 108
+width$ -- 35
+write$ -- 358
 (There were 4 error messages)

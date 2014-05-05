@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  29 APR 2014 21:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.8.9)  5 MAY 2014 17:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -754,9 +754,6 @@ Underfull \hbox (badness 2142) in paragraph at lines 115--119
  []
 
 
-LaTeX Warning: Reference `timings' on page 4 undefined on input line 120.
-
-
 Overfull \hbox (261.0pt too wide) has occurred while \output is active
 [][] 
  []
@@ -856,27 +853,35 @@ Missing character: There is no ¾ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
 Missing character: There is no ü in font ptmr7t!
 )
-Extra height:20.24243pt when 516.24243pt
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 493.87894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:20.24243pt when 517.24243pt
+Extra height:20.24243pt when 494.87894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Extra height:20.24243pt when 518.24243pt
-Extra height:0.0pt when 519.24243pt
-(2)Left:519.24243pt Right:517.48486pt Output:519.24243pt
+Extra height:20.24243pt when 495.87894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 496.87894pt
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Extra height:20.24243pt when 497.87894pt
+Extra height:0.0pt when 498.87894pt
+(2)Left:498.87894pt Right:490.75787pt Output:498.87894pt
 - LAST -
 Extra skip:0.0pt
-Left:519.24243pt
-Right:517.48486pt
-Output:519.24243pt
+Left:498.87894pt
+Right:490.75787pt
+Output:498.87894pt
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -894,18 +899,12 @@ Overfull \vbox (1.0pt too high) has occurred while \output is active []
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 5779 strings out of 493315
- 83824 string characters out of 6137905
- 177476 words of memory out of 5000000
- 9055 multiletter control sequences out of 15000+600000
+ 5777 strings out of 493315
+ 83804 string characters out of 6137905
+ 175452 words of memory out of 5000000
+ 9053 multiletter control sequences out of 15000+600000
  55538 words of font info for 109 fonts, out of 8000000 for 9000
  961 hyphenation exceptions out of 8191
  38i,11n,38p,1301b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -926,7 +925,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (7 pages, 254667 bytes).
+Output written on document.pdf (7 pages, 253891 bytes).
 PDF statistics:
  145 PDF objects out of 1000 (max. 8388607)
  100 compressed objects within 1 object stream
