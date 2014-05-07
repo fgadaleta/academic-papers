@@ -50,6 +50,7 @@
 \usepackage{amsthm,amsmath}
 \usepackage{enumitem}
 \usepackage{bbm}
+
 %\RequirePackage{natbib}
 %\RequirePackage{hyperref}
 \usepackage[utf8]{inputenc} %unicode support
@@ -264,7 +265,11 @@ In this work, we successfully replaced a permutation-based multiple-testing corr
 %%%%%%%%%%%%%%%%
 %% Background %%
 %%
+
+
 \section*{Introduction}
+%\marginpar{why not just citing your work with a reference. e.g. the memory issue was solved by the implementation described in [Ref].}
+
 The time that is currently required to diagnose rare diseases is quite long. According to a result \cite{Shire2013}, in which patients have been surveyed for FIXME, it takes on average 7.6 years in US and 5.6 years in UK to receive a proper diagnosis. In the mean time, the average patient might visit a number of primary care doctors and specialists in order to receive up to three misdiagnoses \cite{Shire2013}. Understanding the genetic origins of complex diseases might be the key to reduce the time of diagnosis. An increasing number of scientists and studies are being addressed to unravel the complex mechanisms that regulate genetic disorders (FIXME some key references).
 A trend that can pave the way to draw better conclusions about the aforementioned mechanisms is represented by personalised medicine.   
 %This leads to an increasing amount of new healthcares tailored to the individual patients. refs?
@@ -307,20 +312,24 @@ f_X(x) = (1-\pi) \delta(x) + \pi g_X(x) \mathbbm{1}_{(x>0)}
 where $\delta(x)$ is a point probability mass at $x=0$ and $\mathbbm{1}_{(x>0)}$ is an indicator function taking the value 1 if $x>0$ and 0 otherwise. 
 The parameter $\pi$ depends on the dataset at hand. As a matter of fact, the minimum of the nonzero values cannot be too close to zero, because it would correspond to an interaction for which no genotype combination would show any significant association with the trait (which would lead to the ``O'' category for each genotype combination and therefore an exact-zero). Hence our choice of shifting the distribution of the non-zero values to the right.
 
-{\color{red} FIXME This is where Francesco comes in play ... write a text that justifies that a shifted gamma distribution is a good choice in general and especially here. Reference \cite{VanLishout2013} gives for an instance a detailed explanation of how a test-statistic is computed when the trait is binary and no correction is made for the main effects. Start for instance by linking to this and saying simple that the final test-statistic returned by this proecdure is a chi-square. Explain that the family of gamma distribution is powerful enough to model such a test-statistic. Reference \cite{Mahachie2012} shows for instance how MB-MDR can handle a continuous trait and correct for lower-order effects. At the end, the test-statistic is a student t-test. Show again how easily this will be fitted using a gamma.}
+We consider the generalised gamma (Refs. Stacy E.W. (1962) ?A generalization of the Gamma distribution,? The Annals of Mathematical Statistics, 33, 1187-1192.) as an appropriate distribution that specifically suits our case. The generalised gamma distribution is known to be flexible enough to include several families such as the exponential, Weibull, lognormal, etc. 
+Some authors (Refs. Allenby G.M., Leone R.P., Jen L. (1999) ?A Dynamic model of purchase timing with application to direct marketing,? Journal of the American Statistical Associ- ation, 94, 365-74.) discourage the use of  the Gamma distribution for model fitting due to the difficulty of parameter estimation. However, in the specific case of fitting the distribution of the test statistics described thus far, we believe that simpler models would be consistently inaccurate. Moreover, the lack of knowledge regarding the shape of a plausible distribution and the diversity of the data we are performing our computations, make a versatile distribution function like the Gamma, a reasonable  option.
+
+%{\color{red} FIXME This is where Francesco comes in play ... write a text that justifies that a shifted gamma distribution is a good choice in general and especially here. Reference \cite{VanLishout2013} gives for an instance a detailed explanation of how a test-statistic is computed when the trait is binary and no correction is made for the main effects. Start for instance by linking to this and saying simple that the final test-statistic returned by this proecdure is a chi-square. Explain that the family of gamma distribution is powerful enough to model such a test-statistic. Reference \cite{Mahachie2012} shows for instance how MB-MDR can handle a continuous trait and correct for lower-order effects. At the end, the test-statistic is a student t-test. Show again how easily this will be fitted using a gamma.}
 
 All 8 analysis show that $g_X(x)$ is the density function of a shifted gamma distribution, i.e. $g_X(x) = \frac{(x-\gamma)^{k-1}e^{\frac{x-\gamma}{\theta}}}{\theta^k\Gamma(k)}$, where $k$, $\theta$ and $\gamma$ are respectively the shape, scale and location parameters. 
 
-We show now the goodness of fitt in eight practical scenarios. We run MBMDR-4.2.0 on 4 different datasets and adapt the source code to store every single test-statistics generated by the program into a file. We consider four datasets:
+We hereby show the goodness of fit in eight realistic scenarios by running MBMDR-4.2.0 on 4 different datasets. We then adapt the source code to save each single test-statistic into a file. The four datasets we consider in our experiments are reported below. 
 
 \begin{itemize}
-\item A simulated dataset $D_1$, for which the trait is expressed on a binary scale. This dataset is composed of 100,000 SNPs and 1000 individuals (500 cases and 500 controls). It was generated using GAMETES, a fast, direct algorithm for generating pure, strict, epistatic models with random architectures \cite{gametes2012}.
-\item A real-life dataset $D_2$, for which the trait is expressed on a binary scale ... still to be discussed with Kristel...
-\item A simulated dataset $D_3$, for which the trait is expressed on a continuous scale. This dataset is composed of 100,000 SNPs and 1000 individuals. ... explain the model ...
-\item A real-life dataset $D_4$, for which the trait is expressed on a continuous scale ... still to be discussed with Kristel ... (so far, I used one of Elena's big datasets)
+\item Simulated dataset $D_1$, in which the trait is expressed on a binary scale. This dataset is composed of 100,000 SNPs and 1000 individuals (500 cases and 500 controls). It was generated using GAMETES  \cite{gametes2012}, a fast, direct algorithm for generating purely epistatic models with random architectures.
+\item Real-life dataset $D_2$, in which the trait is expressed on a binary scale ... still to be discussed with Kristel...
+\item Simulated dataset $D_3$, in which the trait is expressed on a continuous scale. This dataset is composed of 100,000 SNPs and 1000 individuals. ... explain the model ...
+
+\item Real-life dataset $D_4$, for which the trait is expressed on a continuous scale ... still to be discussed with Kristel ... (so far, I used one of Elena's big datasets)
 \end{itemize}
 
-We analyze each datasets with two typical settings of MBMDR-4.2.0:
+We analyze each dataset with two typical settings of MBMDR-4.2.0:
 \begin{itemize}
 \item Setting $S_1$ (default parameters): the programs makes a codominant correction for the main effects of each SNP.
 \item Setting $S_2$ (option "-a NONE"): the program does not make any adjustment for the main effects of the SNPs.
@@ -329,6 +338,8 @@ We analyze each datasets with two typical settings of MBMDR-4.2.0:
 \smallskip
 
 {\color{red} Text by Francesco to show that the non-zero values of the 8 possible combinations of datasets and settings, follow a shifted gamma distribution ... I will send the 8 files ... also explain that we are in fact interested in the tail of the distribution and that this is the part of the distribution that we need to fitt as precisely as possible, not the middle or the head ... please produce a figure composed of 8 plots, comparing each time the observed data and the fitted distribution ...}
+
+{\color{purple} TO BE EDITED}
 
 \subsection*{The gammaMAXT algorithm}
 
